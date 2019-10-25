@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
+<html>
+<head>
+	<title>SignUp Vendor</title>
+  <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -37,15 +38,16 @@
 
     <!-- Bracket CSS -->
     <link rel="stylesheet" href="../css/bracket.css">
-  </head>
+	
 
-  <body>
 
-    <div class="d-flex align-items-center justify-content-center bg-br-primary ht-100v">
+</head>
+<body>
+	 <div class="d-flex align-items-center justify-content-center bg-br-primary ht-100v">
 
       <div class="login-wrapper wd-300 wd-xs-350 pd-25 pd-xs-40 bg-white rounded shadow-base">
-        <div class="signin-logo tx-center tx-28 tx-bold tx-inverse"><span class="tx-normal">[</span> WHere Is To <span class="tx-info">Buy</span> <span class="tx-normal">]</span></div>
-        <div class="tx-center mg-b-60">Login Panel for Vendor</div>
+        <div class="signin-logo tx-center tx-28 tx-bold tx-inverse"><span class="tx-normal">[</span> Where Is To <span class="tx-info">Buy</span> <span class="tx-normal">]</span></div>
+        <div class="tx-center mg-b-60">SignUp Panel for Vendor</div>
 
     <form action="signup_db.php" method="POST" >
         <div class="form-group">
@@ -62,23 +64,8 @@
         <input type="submit" class="btn btn-info btn-block" value="submit" name="">
     </form>
     
-        <div class="mg-t-40 tx-center">Have already account? <a href="Signin" class="tx-info">Sign In</a></div>
+        <div class="mg-t-40 tx-center">Have already account? <a href="login.html" class="tx-info">Sign In</a></div>
       </div><!-- login-wrapper -->
     </div><!-- d-flex -->
-
-    <script src="../lib/jquery/jquery.min.js"></script>
-    <script src="../lib/jquery-ui/ui/widgets/datepicker.js"></script>
-    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../lib/select2/js/select2.min.js"></script>
-    <script>
-      $(function(){
-        'use strict';
-
-        $('.select2').select2({
-          minimumResultsForSearch: Infinity
-        });
-      });
-    </script>
-
-  </body>
+</body>
 </html>
