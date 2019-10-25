@@ -1,426 +1,240 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
+<html>
+<head>
+    <title>Profile</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
-    <!-- Twitter -->
-    <meta name="twitter:site" content="@themepixels">
-    <meta name="twitter:creator" content="@themepixels">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bracket Plus">
-    <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
-    <meta name="twitter:image" content="http://themepixels.me/bracketplus/img/bracketplus-social.png">
-
-    <!-- Facebook -->
-    <meta property="og:url" content="http://themepixels.me/bracketplus">
-    <meta property="og:title" content="Bracket Plus">
-    <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
-
-    <meta property="og:image" content="http://themepixels.me/bracketplus/img/bracketplus-social.png">
-    <meta property="og:image:secure_url" content="http://themepixels.me/bracketplus/img/bracketplus-social.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="600">
-
-    <!-- Meta -->
-    <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
-    <meta name="author" content="ThemePixels">
-
-    <title>WITB</title>
-
-    <!-- vendor css -->
-    <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="../lib/rickshaw/rickshaw.min.css" rel="stylesheet">
-    <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
-
     <!-- Bracket CSS -->
-    <link rel="stylesheet" href="../css/bracket.css">
-  </head>
-
-  <body>
-
-    <!-- ########## START: LEFT PANEL ########## -->
-    <div class="br-logo"><a href=""><span>[</span>Where Is To <i>Buy</i><span>]</span></a></div>
-    <div class="br-sideleft sideleft-scrollbar">
-      <label class="sidebar-label pd-x-10 mg-t-20 op-3">Navigation</label>
-      <ul class="br-sideleft-menu">
-        <li class="br-menu-item">
-          <a href="index.html" class="br-menu-link active">
-            <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i>
-            <span class="menu-item-label">Dashboard</span>
-          </a>
-        </li>
-        <li class="br-menu-item">
-          <a href="index.html" class="br-menu-link ">
-            <!-- <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i> -->
-            <span class="menu-item-label">Add Products</span>
-          </a>
-        </li>
-        <li class="br-menu-item">
-          <a href="index.html" class="br-menu-link ">
-            <!-- <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i> -->
-            <span class="menu-item-label">View Products</span>
-          </a>
-        </li>
-        
-      </ul><!-- br-sideleft-menu -->
-
-      <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Information Summary</label>
-
-      <div class="info-list">
-        <div class="info-list-item">
-          <div>
-            <p class="info-list-label">Sales</p>
-            <h5 class="info-list-amount">32.3%</h5>
+    <link rel="stylesheet" href="bracket.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+<div class="pd-10 bg-mantle rounded">
+  <ul class="nav nav-pills flex-column flex-md-row" role="tablist">
+      <li style="width: 100px;">Followers</li>
+      <li style="width: 100px;">Following</li>
+      <li><i class="fa fa-envelope-open-o" aria-hidden="true"></i></li>
+  </ul>
+</div>
+<div class="card bg-mantle shadow-base bd-0 rounded-0 widget-4">
+        <div class="card-header ht-75">
+          <div class="tx-24 hidden-xs-down">
+            <a href="" class="mg-r-10"><i class="icon ion-ios-email-outline"></i></a>
+            <a href=""><i class="icon ion-more"></i></a>
           </div>
-          <span class="peity-bar" data-peity='{ "fill": ["#336490"], "height": 35, "width": 60 }'>8,6,5,9,8,4,9,3,5,9</span>
-        </div><!-- info-list-item -->
+        </div><!-- card-header -->
+        <div class="card-body bg-dark">
+          <div class="card-profile-img">
+            <img src="https://via.placeholder.com/500" alt="">
+          </div><!-- card-profile-img -->
+          <h4 class="tx-normal tx-roboto tx-white">Vendor Name</h4>
+          <p class="mg-b-25">Vendor Type</p>
 
-        <div class="info-list-item">
-          <div>
-            <p class="info-list-label">User Engagement</p>
-            <h5 class="info-list-amount">140.05</h5>
-          </div>
-          <span class="peity-bar" data-peity='{ "fill": ["#1C7973"], "height": 35, "width": 60 }'>4,3,5,7,12,10,4,5,11,7</span>
-        </div><!-- info-list-item -->
+          <p class="wd-md-500 mg-md-l-auto mg-md-r-auto mg-b-25">Vendor Description</p>
 
-        <div class="info-list-item">
-          <div>
-            <p class="info-list-label">User Drop</p>
-            <h5 class="info-list-amount">82.02%</h5>
-          </div>
-          <span class="peity-bar" data-peity='{ "fill": ["#8E4246"], "height": 35, "width": 60 }'>1,2,1,3,2,10,4,12,7</span>
-        </div><!-- info-list-item -->
-
-        <div class="info-list-item">
-          <div>
-            <p class="info-list-label">New Users</p>
-            <h5 class="info-list-amount">201</h5>
-          </div>
-          <span class="peity-bar" data-peity='{ "fill": ["#9C7846"], "height": 35, "width": 60 }'>3,12,7,9,2,3,4,5,2</span>
-        </div><!-- info-list-item -->
-      </div><!-- info-list -->
-
-      <br>
-    </div><!-- br-sideleft -->
-    <!-- ########## END: LEFT PANEL ########## -->
-
-    <!-- ########## START: HEAD PANEL ########## -->
-    <div class="br-header">
-      <div class="br-header-left">
-        <div class="navicon-left hidden-md-down"><a id="btnLeftMenu" href=""><i class="icon ion-navicon-round"></i></a></div>
-        <div class="navicon-left hidden-lg-up"><a id="btnLeftMenuMobile" href=""><i class="icon ion-navicon-round"></i></a></div>
-        <div class="input-group hidden-xs-down wd-170 transition">
-          <input id="searchbox" type="text" class="form-control" placeholder="Search">
-          <span class="input-group-btn">
-            <button class="btn btn-secondary" type="button"><i class="fas fa-search"></i></button>
-          </span>
-        </div><!-- input-group -->
-      </div><!-- br-header-left -->
-      <div class="br-header-right">
-        <nav class="nav">
-          <div class="dropdown">
-            <a href="" class="nav-link pd-x-7 pos-relative" data-toggle="dropdown">
-              <i class="icon ion-ios-email-outline tx-24"></i>
-              <!-- start: if statement -->
-              <span class="square-8 bg-danger pos-absolute t-15 r-0 rounded-circle"></span>
-              <!-- end: if statement -->
-            </a>
-            <div class="dropdown-menu dropdown-menu-header">
-              <div class="dropdown-menu-label">
-                <label>Messages</label>
-                <a href="">+ Add New Message</a>
-              </div><!-- d-flex -->
-
-              <div class="media-list">
-                <!-- loop starts here -->
-                <a href="" class="media-list-link">
-                  <div class="media">
-                    <img src="https://via.placeholder.com/500" alt="">
-                    <div class="media-body">
-                      <div>
-                        <p>Donna Seay</p>
-                        <span>2 minutes ago</span>
-                      </div><!-- d-flex -->
-                      <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring.</p>
-                    </div>
-                  </div><!-- media -->
-                </a>
-                <!-- loop ends here -->
-                <a href="" class="media-list-link read">
-                  <div class="media">
-                    <img src="https://via.placeholder.com/500" alt="">
-                    <div class="media-body">
-                      <div>
-                        <p>Samantha Francis</p>
-                        <span>3 hours ago</span>
-                      </div><!-- d-flex -->
-                      <p>My entire soul, like these sweet mornings of spring.</p>
-                    </div>
-                  </div><!-- media -->
-                </a>
-                <a href="" class="media-list-link read">
-                  <div class="media">
-                    <img src="https://via.placeholder.com/500" alt="">
-                    <div class="media-body">
-                      <div>
-                        <p>Robert Walker</p>
-                        <span>5 hours ago</span>
-                      </div><!-- d-flex -->
-                      <p>I should be incapable of drawing a single stroke at the present moment...</p>
-                    </div>
-                  </div><!-- media -->
-                </a>
-                <a href="" class="media-list-link read">
-                  <div class="media">
-                    <img src="https://via.placeholder.com/500" alt="">
-                    <div class="media-body">
-                      <div>
-                        <p>Larry Smith</p>
-                        <span>Yesterday</span>
-                      </div><!-- d-flex -->
-                      <p>When, while the lovely valley teems with vapour around me, and the meridian sun strikes...</p>
-                    </div>
-                  </div><!-- media -->
-                </a>
-                <div class="dropdown-footer">
-                  <a href=""><i class="fas fa-angle-down"></i> Show All Messages</a>
-                </div>
-              </div><!-- media-list -->
-            </div><!-- dropdown-menu -->
-          </div><!-- dropdown -->
-          <div class="dropdown">
-            <a href="" class="nav-link pd-x-7 pos-relative" data-toggle="dropdown">
-              <i class="icon ion-ios-bell-outline tx-24"></i>
-              <!-- start: if statement -->
-              <span class="square-8 bg-danger pos-absolute t-15 r-5 rounded-circle"></span>
-              <!-- end: if statement -->
-            </a>
-            <div class="dropdown-menu dropdown-menu-header">
-              <div class="dropdown-menu-label">
-                <label>Notifications</label>
-                <a href="">Mark All as Read</a>
-              </div><!-- d-flex -->
-
-              <div class="media-list">
-                <!-- loop starts here -->
-                <a href="" class="media-list-link read">
-                  <div class="media">
-                    <img src="https://via.placeholder.com/500" alt="">
-                    <div class="media-body">
-                      <p class="noti-text"><strong>Suzzeth Bungaos</strong> tagged you and 18 others in a post.</p>
-                      <span>October 03, 2017 8:45am</span>
-                    </div>
-                  </div><!-- media -->
-                </a>
-                <!-- loop ends here -->
-                <a href="" class="media-list-link read">
-                  <div class="media">
-                    <img src="https://via.placeholder.com/500" alt="">
-                    <div class="media-body">
-                      <p class="noti-text"><strong>Mellisa Brown</strong> appreciated your work <strong>The Social Network</strong></p>
-                      <span>October 02, 2017 12:44am</span>
-                    </div>
-                  </div><!-- media -->
-                </a>
-                <a href="" class="media-list-link read">
-                  <div class="media">
-                    <img src="https://via.placeholder.com/500" alt="">
-                    <div class="media-body">
-                      <p class="noti-text">20+ new items added are for sale in your <strong>Sale Group</strong></p>
-                      <span>October 01, 2017 10:20pm</span>
-                    </div>
-                  </div><!-- media -->
-                </a>
-                <a href="" class="media-list-link read">
-                  <div class="media">
-                    <img src="https://via.placeholder.com/500" alt="">
-                    <div class="media-body">
-                      <p class="noti-text"><strong>Julius Erving</strong> wants to connect with you on your conversation with <strong>Ronnie Mara</strong></p>
-                      <span>October 01, 2017 6:08pm</span>
-                    </div>
-                  </div><!-- media -->
-                </a>
-                <div class="dropdown-footer">
-                  <a href=""><i class="fas fa-angle-down"></i> Show All Notifications</a>
-                </div>
-              </div><!-- media-list -->
-            </div><!-- dropdown-menu -->
-          </div><!-- dropdown -->
-          <div class="dropdown">
-            <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
-              <span class="logged-name hidden-md-down">Katherine</span>
-              <img src="https://via.placeholder.com/500" class="wd-32 rounded-circle" alt="">
-              <span class="square-10 bg-success"></span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-header wd-250">
-              <div class="tx-center">
-                <a href=""><img src="https://via.placeholder.com/500" class="wd-80 rounded-circle" alt=""></a>
-                <h6 class="logged-fullname">Katherine P. Lumaad</h6>
-                <p>youremail@domain.com</p>
-              </div>
-              <hr>
-              <ul class="list-unstyled user-profile-nav">
-                <li><a href=""><i class="icon ion-ios-person"></i> Edit Profile</a></li>
-                <li><a href=""><i class="icon ion-ios-gear"></i> Settings</a></li>
-                <!-- <li><a href=""><i class="icon ion-ios-download"></i> Downloads</a></li> -->
-                <!-- <li><a href=""><i class="icon ion-ios-star"></i> Favorites</a></li> -->
-                <!-- <li><a href=""><i class="icon ion-ios-folder"></i> Collections</a></li> -->
-                <li><a href="signout.php"><i class="icon ion-power"></i> Sign Out</a></li>
-              </ul>
-            </div><!-- dropdown-menu -->
-          </div><!-- dropdown -->
-        </nav>
-        <div class="navicon-right">
-          <a id="btnRightMenu" href="" class="pos-relative">
-            <!-- <i class="icon ion-ios-chatboxes-outline"></i> -->
-            <!-- start: if statement -->
-            <!-- <span class="square-8 bg-danger pos-absolute t-10 r--5 rounded-circle"></span> -->
-            <!-- end: if statement -->
-          </a>
-        </div><!-- navicon-right -->
-      </div><!-- br-header-right -->
-    </div><!-- br-header -->
-    <!-- ########## END: HEAD PANEL ########## -->
-
-
-    <!-- ########## START: MAIN PANEL ########## -->
-    <div class="br-mainpanel">
-      <div class="br-pagetitle">
-        <!-- <i class="icon ion-ios-home-outline"></i> -->
-        <div>
-          <!-- <h4>Dashboard</h4> -->
-          <!-- <p class="mg-b-0">Do bigger things with Bracket plus, the responsive bootstrap 4 admin template.</p> -->
-        </div>
+          <p class="mg-b-0 tx-24">
+            <a href="" class="tx-white-8 mg-r-5"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="" class="tx-white-8 mg-r-5"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="" class="tx-white-8 mg-r-5"><i class="fa fa-twitter"></i></a>
+            <a href="" class="tx-white-8 mg-r-5"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+          </p>
+        </div><!-- card-body -->
       </div>
 
-      <div class="br-pagebody">
-        <div class="row row-sm">
-          <div class="col-sm-6 col-xl-3">
-            <div class="bg-info rounded overflow-hidden">
-              <div class="pd-x-20 pd-t-20 d-flex align-items-center">
-                <i class="ion ion-earth tx-60 lh-0 tx-white op-7"></i>
-                <div class="mg-l-20">
-                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">Today's Visits</p>
-                  <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">1,975,224</p>
-                  <span class="tx-11 tx-roboto tx-white-8">24% higher yesterday</span>
-                </div>
-              </div>
-              <div id="ch1" class="ht-50 tr-y-1"></div>
-            </div>
-          </div><!-- col-3 -->
-          <div class="col-sm-6 col-xl-3 mg-t-20 mg-sm-t-0">
-            <div class="bg-purple rounded overflow-hidden">
-              <div class="pd-x-20 pd-t-20 d-flex align-items-center">
-                <i class="ion ion-bag tx-60 lh-0 tx-white op-7"></i>
-                <div class="mg-l-20">
-                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">Today Sales</p>
-                  <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">$329,291</p>
-                  <span class="tx-11 tx-roboto tx-white-8">$390,212 before tax</span>
-                </div>
-              </div>
-              <div id="ch3" class="ht-50 tr-y-1"></div>
-            </div>
-          </div><!-- col-3 -->
-          <div class="col-sm-6 col-xl-3 mg-t-20 mg-xl-t-0">
-            <div class="bg-teal rounded overflow-hidden">
-              <div class="pd-x-20 pd-t-20 d-flex align-items-center">
-                <i class="ion ion-monitor tx-60 lh-0 tx-white op-7"></i>
-                <div class="mg-l-20">
-                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">% Unique Visits</p>
-                  <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">54.45%</p>
-                  <span class="tx-11 tx-roboto tx-white-8">23% average duration</span>
-                </div>
-              </div>
-              <div id="ch2" class="ht-50 tr-y-1"></div>
-            </div>
-          </div><!-- col-3 -->
-          <div class="col-sm-6 col-xl-3 mg-t-20 mg-xl-t-0">
-            <div class="bg-primary rounded overflow-hidden">
-              <div class="pd-x-20 pd-t-20 d-flex align-items-center">
-                <i class="ion ion-clock tx-60 lh-0 tx-white op-7"></i>
-                <div class="mg-l-20">
-                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">Bounce Rate</p>
-                  <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">32.16%</p>
-                  <span class="tx-11 tx-roboto tx-white-8">65.45% on average time</span>
-                </div>
-              </div>
-              <div id="ch4" class="ht-50 tr-y-1"></div>
-            </div>
-          </div><!-- col-3 -->
-        </div><!-- row -->
+      <div class="ht-70 bg-gray-100 pd-x-20 d-flex align-items-center justify-content-center shadow-base">
+        <ul class="nav nav-outline active-info align-items-center flex-row" role="tablist">
+          <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#posts" role="tab">Posts</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#photos" role="tab">Photos</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#" role="tab">Favorites</a></li>
+          <li class="nav-item hidden-xs-down"><a class="nav-link" data-toggle="tab" href="#" role="tab">Settings</a></li>
+        </ul>
+      </div>
+
+      <div class="tab-content br-profile-body">
+        <div class="tab-pane fade active show" id="posts">
+          <div class="row">
+            <div class="col-lg-4 mg-t-30 mg-lg-t-0">
+              <div class="card pd-20 pd-xs-30 shadow-base bd-0" style="margin: 20px;">
+                <h6 class="tx-gray-800 tx-uppercase tx-semibold tx-13 mg-b-25">Contact Information</h6>
+
+                <label class="tx-10 tx-uppercase tx-mont tx-medium tx-spacing-1 mg-b-2">Phone Number</label>
+                <p class="tx-info mg-b-25">+1 234 567 8910</p>
+
+                <label class="tx-10 tx-uppercase tx-mont tx-medium tx-spacing-1 mg-b-2">Email Address</label>
+                <p class="tx-inverse mg-b-25">katherine.pechon@themepixels.me</p>
+
+                <label class="tx-10 tx-uppercase tx-mont tx-medium tx-spacing-1 mg-b-2">Home Address</label>
+                <p class="tx-inverse mg-b-25">1352 Science Center Drive Terreton, ID 83450 </p>
+
+                <label class="tx-10 tx-uppercase tx-mont tx-medium tx-spacing-1 mg-b-2">Office Address</label>
+                <p class="tx-inverse mg-b-50">1352 Science Center Drive Terreton, ID 83450 </p>
+
+                <label class="tx-10 tx-uppercase tx-mont tx-medium tx-spacing-1 mg-b-2">Website</label>
+                <p class="tx-inverse mg-b-50">www.wtb.com</p>
 
 
-      </div><!-- br-pagebody -->
-      <footer class="br-footer">
-        <div class="footer-left">
-          <!-- <div class="mg-b-2">Copyright &copy; 2017. Bracket Plus. All Rights Reserved.</div> -->
-          <div>made by Mukul.</div>
-        </div>
-        <!-- <div class="footer-right d-flex align-items-center">
-          <span class="tx-uppercase mg-r-10">Share:</span>
-          <a target="_blank" class="pd-x-5" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//themepixels.me/bracketplus/intro"><i class="fab fa-facebook tx-20"></i></a>
-          <a target="_blank" class="pd-x-5" href="https://twitter.com/home?status=Bracket%20Plus,%20your%20best%20choice%20for%20premium%20quality%20admin%20template%20from%20Bootstrap.%20Get%20it%20now%20at%20http%3A//themepixels.me/bracketplus/intro"><i class="fab fa-twitter tx-20"></i></a>
-        </div> -->
-      </footer>
-    </div><!-- br-mainpanel -->
-    <!-- ########## END: MAIN PANEL ########## -->
+                <label class="tx-10 tx-uppercase tx-mont tx-medium tx-spacing-1 mg-b-5">Products</label>
+                <ul class="list-unstyled profile-skills">
+                  <li><span>Product1</span></li>
+                  <li><span>Product2</span></li>
+                  <li><span>Product3</span></li>
+                  <li><span>Product4</span></li>
+                  <li><span>Product5</span></li>
+                  <li><span>Product6</span></li>
+                  <li><span>Product7</span></li>
+                  <li><span>Product8</span></li>
+                </ul>
+              </div><!-- card -->
 
-    <script src="../lib/jquery/jquery.min.js"></script>
-    <script src="../lib/jquery-ui/ui/widgets/datepicker.js"></script>
-    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="../lib/moment/min/moment.min.js"></script>
-    <script src="../lib/peity/jquery.peity.min.js"></script>
-    <script src="../lib/rickshaw/vendor/d3.min.js"></script>
-    <script src="../lib/rickshaw/vendor/d3.layout.min.js"></script>
-    <script src="../lib/rickshaw/rickshaw.min.js"></script>
-    <script src="../lib/jquery.flot/jquery.flot.js"></script>
-    <script src="../lib/jquery.flot/jquery.flot.resize.js"></script>
-    <script src="../lib/flot-spline/js/jquery.flot.spline.min.js"></script>
-    <script src="../lib/jquery-sparkline/jquery.sparkline.min.js"></script>
-    <script src="../lib/echarts/echarts.min.js"></script>
-    <script src="../lib/select2/js/select2.full.min.js"></script>
-    <script src="http://maps.google.com/maps/api/js?key=AIzaSyAq8o5-8Y5pudbJMJtDFzb8aHiWJufa5fg"></script>
-    <script src="../lib/gmaps/gmaps.min.js"></script>
+              <div class="card pd-20 pd-xs-30 shadow-base bd-0 mg-t-30">
+                <h6 class="tx-gray-800 tx-uppercase tx-semibold tx-13 mg-b-30">Other Vendors</h6>
+                <div class="media-list">
+                  <div class="media align-items-center pd-b-10">
+                    <img src="https://via.placeholder.com/500" class="wd-45 rounded-circle" alt="">
+                    <div class="media-body mg-x-15 mg-xs-x-20">
+                      <h6 class="mg-b-2 tx-inverse tx-14">Vendor1</h6>
+                      <p class="mg-b-0 tx-12">@marilyntarter</p>
+                    </div><!-- media-body -->
+                    <a href="#" class="btn btn-outline-secondary btn-icon rounded-circle mg-r-5">
+                      <div><i class="icon ion-android-person-add tx-16"></i></div>
+                    </a>
+                  </div><!-- media -->
+                  <div class="media align-items-center pd-y-10">
+                    <img src="https://via.placeholder.com/500" class="wd-45 rounded-circle" alt="">
+                    <div class="media-body mg-x-15 mg-xs-x-20">
+                      <h6 class="mg-b-2 tx-inverse tx-14">Vendor2</h6>
+                      <p class="mg-b-0 tx-12">@bconnor</p>
+                    </div><!-- media-body -->
+                    <a href="#" class="btn btn-outline-secondary btn-icon rounded-circle mg-r-5">
+                      <div><i class="icon ion-android-person-add tx-16"></i></div>
+                    </a>
+                  </div><!-- media -->
+                  <div class="media align-items-center pd-y-10">
+                    <img src="https://via.placeholder.com/500" class="wd-45 rounded-circle" alt="">
+                    <div class="media-body mg-x-15 mg-xs-x-20">
+                      <h6 class="mg-b-2 tx-inverse tx-14">Vendor3</h6>
+                      <p class="mg-b-0 tx-12">@dminer</p>
+                    </div><!-- media-body -->
+                    <a href="#" class="btn btn-outline-secondary btn-icon rounded-circle mg-r-5">
+                      <div><i class="icon ion-android-person-add tx-16"></i></div>
+                    </a>
+                  </div><!-- media -->
+                  <div class="media align-items-center pd-y-10">
+                    <img src="https://via.placeholder.com/500" class="wd-45 rounded-circle" alt="">
+                    <div class="media-body mg-x-15 mg-xs-x-20">
+                      <h6 class="mg-b-2 tx-inverse tx-14">Vendor4</h6>
+                      <p class="mg-b-0 tx-12">@theodore</p>
+                    </div><!-- media-body -->
+                    <a href="#" class="btn btn-outline-secondary btn-icon rounded-circle mg-r-5">
+                      <div><i class="icon ion-android-person-add tx-16"></i></div>
+                    </a>
+                  </div><!-- media -->
+                  <div class="media align-items-center pd-y-10">
+                    <img src="https://via.placeholder.com/500" class="wd-45 rounded-circle" alt="">
+                    <div class="media-body mg-x-15 mg-xs-x-20">
+                      <h6 class="mg-b-2 tx-inverse tx-14">Vendor5</h6>
+                      <p class="mg-b-0 tx-12">@awiggins</p>
+                    </div><!-- media-body -->
+                    <a href="#" class="btn btn-outline-secondary btn-icon rounded-circle mg-r-5">
+                      <div><i class="icon ion-android-person-add tx-16"></i></div>
+                    </a>
+                  </div><!-- media -->
+                </div><!-- media-list -->
+              </div><!-- card -->
+            </div><!-- col-lg-4 -->
+          </div><!-- row -->
+        </div><!-- tab-pane -->
+        <div class="tab-pane fade" id="photos">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="card pd-20 pd-xs-30 shadow-base bd-0 mg-t-30">
+                <h6 class="tx-gray-800 tx-uppercase tx-semibold tx-14 mg-b-30">Recent Photos</h6>
 
-    <script src="../js/bracket.js"></script>
-    <script src="../js/map.shiftworker.js"></script>
-    <script src="../js/ResizeSensor.js"></script>
-    <script src="../js/dashboard.js"></script>
-    <script>
-      $(function(){
-        'use strict'
+                <div class="row row-xs">
+                  <div class="col-6 col-sm-4 col-md-3"><img src="https://via.placeholder.com/800" class="img-fluid" alt=""></div>
+                  <div class="col-6 col-sm-4 col-md-3"><img src="https://via.placeholder.com/300" class="img-fluid" alt=""></div>
+                  <div class="col-6 col-sm-4 col-md-3 mg-t-10 mg-sm-t-0"><img src="https://via.placeholder.com/600x600" class="img-fluid" alt=""></div>
+                  <div class="col-6 col-sm-4 col-md-3 mg-t-10 mg-md-t-0"><img src="https://via.placeholder.com/600x600" class="img-fluid" alt=""></div>
+                  <div class="col-6 col-sm-4 col-md-3 mg-t-10"><img src="https://via.placeholder.com/800" class="img-fluid" alt=""></div>
+                  <div class="col-6 col-sm-4 col-md-3 mg-t-10"><img src="https://via.placeholder.com/800" class="img-fluid" alt=""></div>
+                  <div class="col-6 col-sm-4 col-md-3 mg-t-10"><img src="https://via.placeholder.com/800" class="img-fluid" alt=""></div>
+                  <div class="col-6 col-sm-4 col-md-3 mg-t-10"><img src="https://via.placeholder.com/500" class="img-fluid" alt=""></div>
+                  <div class="col-6 col-sm-4 col-md-3 mg-t-10"><img src="http://via.placeholder.com/300x300" class="img-fluid" alt=""></div>
+                  <div class="col-6 col-sm-4 col-md-3 mg-t-10"><img src="http://via.placeholder.com/300x300" class="img-fluid" alt=""></div>
+                  <div class="col-6 col-sm-4 col-md-3 mg-t-10"><img src="http://via.placeholder.com/300x300" class="img-fluid" alt=""></div>
+                  <div class="col-6 col-sm-4 col-md-3 mg-t-10"><img src="http://via.placeholder.com/300x300" class="img-fluid" alt=""></div>
+                </div><!-- row -->
 
-        // FOR DEMO ONLY
-        // menu collapsed by default during first page load or refresh with screen
-        // having a size between 992px and 1299px. This is intended on this page only
-        // for better viewing of widgets demo.
-        $(window).resize(function(){
-          minimizeMenu();
-        });
+                <p class="mg-t-20 mg-b-0">Loading more photos...</p>
 
-        minimizeMenu();
+              </div><!-- card -->
+            </div><!-- col-lg-8 -->
+            <div class="col-lg-4 mg-t-30 mg-lg-t-0">
+              <div class="card pd-20 pd-xs-30 shadow-base bd-0 mg-t-30">
+                <h6 class="tx-gray-800 tx-uppercase tx-semibold tx-14 mg-b-30">Photo Albums</h6>
+                <div class="row row-xs mg-b-15">
+                  <div class="col"><img src="https://via.placeholder.com/800" class="img-fluid" alt=""></div>
+                  <div class="col"><img src="https://via.placeholder.com/800" class="img-fluid" alt=""></div>
+                  <div class="col">
+                    <div class="overlay">
+                      <img src="https://via.placeholder.com/800" class="img-fluid" alt="">
+                      <div class="overlay-body bg-black-5 d-flex align-items-center justify-content-center">
+                        <span class="tx-white tx-12">20+ more</span>
+                      </div><!-- overlay-body -->
+                    </div><!-- overlay -->
+                  </div>
+                </div><!-- row -->
+                <div class="d-flex alig-items-center justify-content-between">
+                  <h6 class="tx-inverse tx-14 mg-b-0">Profile Photos</h6>
+                  <span class="tx-12">24 Photos</span>
+                </div><!-- d-flex -->
 
-        function minimizeMenu() {
-          if(window.matchMedia('(min-width: 992px)').matches && window.matchMedia('(max-width: 1299px)').matches) {
-            // show only the icons and hide left menu label by default
-            $('.menu-item-label,.menu-item-arrow').addClass('op-lg-0-force d-lg-none');
-            $('body').addClass('collapsed-menu');
-            $('.show-sub + .br-menu-sub').slideUp();
-          } else if(window.matchMedia('(min-width: 1300px)').matches && !$('body').hasClass('collapsed-menu')) {
-            $('.menu-item-label,.menu-item-arrow').removeClass('op-lg-0-force d-lg-none');
-            $('body').removeClass('collapsed-menu');
-            $('.show-sub + .br-menu-sub').slideDown();
-          }
-        }
-      });
-    </script>
-  </body>
+                <hr>
+
+                <div class="row row-xs mg-b-15">
+                  <div class="col"><img src="https://via.placeholder.com/600x600" class="img-fluid" alt=""></div>
+                  <div class="col"><img src="https://via.placeholder.com/600x600" class="img-fluid" alt=""></div>
+                  <div class="col">
+                    <div class="overlay">
+                      <img src="https://via.placeholder.com/600x600" class="img-fluid" alt="">
+                      <div class="overlay-body bg-black-5 d-flex align-items-center justify-content-center">
+                        <span class="tx-white tx-12">20+ more</span>
+                      </div><!-- overlay-body -->
+                    </div><!-- overlay -->
+                  </div>
+                </div><!-- row -->
+                <div class="d-flex alig-items-center justify-content-between">
+                  <h6 class="tx-inverse tx-14 mg-b-0">Mobile Uploads</h6>
+                  <span class="tx-12">24 Photos</span>
+                </div><!-- d-flex -->
+
+                <hr>
+
+                <div class="row row-xs mg-b-15">
+                  <div class="col"><img src="http://via.placeholder.com/300x300/0866C6/FFF" class="img-fluid" alt=""></div>
+                  <div class="col"><img src="http://via.placeholder.com/300x300/DC3545/FFF" class="img-fluid" alt=""></div>
+                  <div class="col">
+                    <div class="overlay">
+                      <img src="http://via.placeholder.com/300x300/0866C6/FFF" class="img-fluid" alt="">
+                      <div class="overlay-body bg-black-5 d-flex align-items-center justify-content-center">
+                        <span class="tx-white tx-12">20+ more</span>
+                      </div><!-- overlay-body -->
+                    </div><!-- overlay -->
+                  </div>
+                </div><!-- row -->
+                <div class="d-flex alig-items-center justify-content-between">
+                  <h6 class="tx-inverse tx-14 mg-b-0">Mobile Uploads</h6>
+                  <span class="tx-12">24 Photos</span>
+                </div><!-- d-flex -->
+
+                <a href="" class="d-block mg-t-20"><i class="fa fa-angle-down mg-r-5"></i> Show 8 more albums</a>
+              </div><!-- card -->
+            </div><!-- col-lg-4 -->
+          </div><!-- row -->
+        </div><!-- tab-pane -->
+      </div>
+<script src="bracket.js"></script>
+</body>
 </html>
