@@ -59,7 +59,7 @@
         </div>
         <div class="form-group tx-12">By clicking the Sign Up button below, you agreed to our privacy policy and terms of use of our website.</div>
         <!-- <button type="submit" class="btn btn-info btn-block" value="submit" >Sign Up</button> -->
-        <input type="submit" class="btn btn-info btn-block" value="submit" name="">
+        <input type="submit" class="btn btn-info btn-block" value="submit" name="submit">
     </form>
     
         <div class="mg-t-40 tx-center">Have already account? <a href="Signin" class="tx-info">Sign In</a></div>
