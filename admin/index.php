@@ -51,24 +51,35 @@
       <label class="sidebar-label pd-x-10 mg-t-20 op-3">Navigation</label>
       <ul class="br-sideleft-menu">
         <li class="br-menu-item">
-          <a href="index.html" class="br-menu-link active">
+          <a href="index.php" class="br-menu-link active">
             <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i>
             <span class="menu-item-label">Dashboard</span>
           </a>
         </li>
         <li class="br-menu-item">
-          <a href="index.html" class="br-menu-link ">
+          <a href="add-product.php" class="br-menu-link ">
             <!-- <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i> -->
             <span class="menu-item-label">Add Products</span>
           </a>
         </li>
         <li class="br-menu-item">
-          <a href="index.html" class="br-menu-link ">
+          <a href="view-product.php" class="br-menu-link ">
             <!-- <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i> -->
             <span class="menu-item-label">View Products</span>
           </a>
         </li>
-        
+        <li class="br-menu-item">
+          <a href="maintain-shop.php" class="br-menu-link ">
+            <!-- <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i> -->
+            <span class="menu-item-label">Maintain Shops</span>
+          </a>
+        </li>
+        <li class="br-menu-item">
+          <a href="login-detail.php" class="br-menu-link ">
+            <!-- <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i> -->
+            <span class="menu-item-label">Vendor Details</span>
+          </a>
+        </li>
       </ul><!-- br-sideleft-menu -->
 
       <label class="sidebar-label pd-x-10 mg-t-25 mg-b-20 tx-info">Information Summary</label>
