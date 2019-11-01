@@ -51,13 +51,13 @@
       <label class="sidebar-label pd-x-10 mg-t-20 op-3">Navigation</label>
       <ul class="br-sideleft-menu">
         <li class="br-menu-item">
-          <a href="index.php" class="br-menu-link active">
+          <a href="index.php" class="br-menu-link">
             <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i>
             <span class="menu-item-label">Dashboard</span>
           </a>
         </li>
         <li class="br-menu-item">
-          <a href="add-product.php" class="br-menu-link ">
+          <a href="add-product.php" class="br-menu-link active">
             <!-- <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i> -->
             <span class="menu-item-label">Add Products</span>
           </a>
@@ -312,63 +312,112 @@
       </div>
 
       <div class="br-pagebody">
-        <div class="row row-sm">
-          <div class="col-sm-6 col-xl-3">
-            <div class="bg-info rounded overflow-hidden">
-              <div class="pd-x-20 pd-t-20 d-flex align-items-center">
-                <i class="ion ion-earth tx-60 lh-0 tx-white op-7"></i>
-                <div class="mg-l-20">
-                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">Today's Visits</p>
-                  <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">1,975,224</p>
-                  <span class="tx-11 tx-roboto tx-white-8">24% higher yesterday</span>
+        <div class="br-section-wrapper">
+          <h6 class="br-section-label">Add Product</h6>
+
+        <div class="form-layout form-layout-1">
+            <div class="row mg-b-25">
+              
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="brandName">Enter Brand Name*</label>
+                  <input type="text" name="brandname" parsley-trigger="change" required class="form-control" id="bName">
+                </div>
+              </div><!-- col-4 -->
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="Category">Select Category*</label>
+                  <select class="form-control" name="cat" required onchange="getcategory(this.value)">
+                      <option value="">Electronic</option>
+                  </select>
+                </div>
+              </div><!-- col-4 -->
+               <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="subCategory">Select Sub Category*</label>
+                  <select class="form-control" name="subcat" required onchange="getsubcategory(this.value)">
+                      <option value="1">Mobiles</option>
+                      <option value="2">Mobile Accessories</option>
+                      <option value="3">Laptops</option>
+                      <option value="4">Tablets</option>
+                      <option value="5">Speakers</option>
+                      <option value="6">Camera</option>
+                      <option value="7">Smart Wearable Tech</option>
+                  </select>
                 </div>
               </div>
-              <div id="ch1" class="ht-50 tr-y-1"></div>
-            </div>
-          </div><!-- col-3 -->
-          <div class="col-sm-6 col-xl-3 mg-t-20 mg-sm-t-0">
-            <div class="bg-purple rounded overflow-hidden">
-              <div class="pd-x-20 pd-t-20 d-flex align-items-center">
-                <i class="ion ion-bag tx-60 lh-0 tx-white op-7"></i>
-                <div class="mg-l-20">
-                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">Today Sales</p>
-                  <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">$329,291</p>
-                  <span class="tx-11 tx-roboto tx-white-8">$390,212 before tax</span>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="productName">Enter Product Name*</label>
+                  <input type="text" name="productname" parsley-trigger="change" required class="form-control" id="pName">
                 </div>
               </div>
-              <div id="ch3" class="ht-50 tr-y-1"></div>
-            </div>
-          </div><!-- col-3 -->
-          <div class="col-sm-6 col-xl-3 mg-t-20 mg-xl-t-0">
-            <div class="bg-teal rounded overflow-hidden">
-              <div class="pd-x-20 pd-t-20 d-flex align-items-center">
-                <i class="ion ion-monitor tx-60 lh-0 tx-white op-7"></i>
-                <div class="mg-l-20">
-                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">% Unique Visits</p>
-                  <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">54.45%</p>
-                  <span class="tx-11 tx-roboto tx-white-8">23% average duration</span>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="productType">Enter Product Type*</label>
+                  <input type="text" name="producttype" parsley-trigger="change" required class="form-control" id="pType">
                 </div>
               </div>
-              <div id="ch2" class="ht-50 tr-y-1"></div>
-            </div>
-          </div><!-- col-3 -->
-          <div class="col-sm-6 col-xl-3 mg-t-20 mg-xl-t-0">
-            <div class="bg-primary rounded overflow-hidden">
-              <div class="pd-x-20 pd-t-20 d-flex align-items-center">
-                <i class="ion ion-clock tx-60 lh-0 tx-white op-7"></i>
-                <div class="mg-l-20">
-                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">Bounce Rate</p>
-                  <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">32.16%</p>
-                  <span class="tx-11 tx-roboto tx-white-8">65.45% on average time</span>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="productCode">Enter Product Code*</label>
+                  <input type="text" name="productcode" parsley-trigger="change" required class="form-control" id="pCode">
                 </div>
               </div>
-              <div id="ch4" class="ht-50 tr-y-1"></div>
-            </div>
-          </div><!-- col-3 -->
-        </div><!-- row -->
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="productDescription">Enter Product Description*</label>
+                  <input type="text" name="productdescription" parsley-trigger="change" required class="form-control" id="pDescription">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                <label for="profuctImage">Enter Product Image*</label><br>
+                <input type="file" name="productimage" id="file-1" class="inputfile"
+                    data-multiple-caption="{count} files selected" multiple>
+                    <label for="file-1" class="tx-white bg-info">
+                      <i class="icon ion-ios-upload-outline tx-24"></i>
+                      <span>Choose a file...</span>
+                    </label>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="productQuantity">Enter Product Quantity*</label>
+                  <input type="number" name="productquantity" parsley-trigger="change" required class="form-control" id="pQuantity">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="MRPPrice">Enter MRP Price*</label>
+                  <input type="text" name="mrpprice" parsley-trigger="change" required class="form-control" id="mrpPrice">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="sellingPrice">Enter Selling/Discounted Price*</label>
+                  <input type="text" name="sellingprice" parsley-trigger="change" required class="form-control" id="sPrice">
+                </div>
+              </div>
+               <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="HSNCode">Select HSN Code*</label>
+                  <select class="form-control" name="hsncode" required onchange="gethsncode(this.value)">
+                      <option value="">Select HSN Code</option>
+                  </select>
+                </div>
+              </div>
+            </div><!-- row -->
+            <div class="form-layout-footer">
+              <button class="btn btn-info">Submit Form</button>
+            </div><!-- form-layout-footer -->
+          </div><!-- form-layout -->
+        </div>
+      </div>
 
 
-      </div><!-- br-pagebody -->
+
+
       <footer class="br-footer">
         <div class="footer-left">
           <!-- <div class="mg-b-2">Copyright &copy; 2017. Bracket Plus. All Rights Reserved.</div> -->

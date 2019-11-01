@@ -32,15 +32,17 @@
     <meta name="author" content="ThemePixels">
 
     <title>WITB</title>
+    <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 
     <!-- vendor css -->
-    <link href="../lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    
     <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="../lib/rickshaw/rickshaw.min.css" rel="stylesheet">
     <link href="../lib/select2/css/select2.min.css" rel="stylesheet">
-
     <!-- Bracket CSS -->
     <link rel="stylesheet" href="../css/bracket.css">
+    
+
   </head>
 
   <body>
@@ -51,19 +53,19 @@
       <label class="sidebar-label pd-x-10 mg-t-20 op-3">Navigation</label>
       <ul class="br-sideleft-menu">
         <li class="br-menu-item">
-          <a href="index.php" class="br-menu-link active">
+          <a href="index.php" class="br-menu-link">
             <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i>
             <span class="menu-item-label">Dashboard</span>
           </a>
         </li>
         <li class="br-menu-item">
-          <a href="add-product.php" class="br-menu-link ">
+          <a href="add-product.php" class="br-menu-link">
             <!-- <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i> -->
             <span class="menu-item-label">Add Products</span>
           </a>
         </li>
         <li class="br-menu-item">
-          <a href="view-product.php" class="br-menu-link ">
+          <a href="view-product.php" class="br-menu-link">
             <!-- <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i> -->
             <span class="menu-item-label">View Products</span>
           </a>
@@ -75,7 +77,7 @@
           </a>
         </li>
         <li class="br-menu-item">
-          <a href="login-detail.php" class="br-menu-link ">
+          <a href="login-detail.php" class="br-menu-link active">
             <!-- <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i> -->
             <span class="menu-item-label">Vendor Details</span>
           </a>
@@ -312,68 +314,46 @@
       </div>
 
       <div class="br-pagebody">
-        <div class="row row-sm">
-          <div class="col-sm-6 col-xl-3">
-            <div class="bg-info rounded overflow-hidden">
-              <div class="pd-x-20 pd-t-20 d-flex align-items-center">
-                <i class="ion ion-earth tx-60 lh-0 tx-white op-7"></i>
-                <div class="mg-l-20">
-                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">Today's Visits</p>
-                  <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">1,975,224</p>
-                  <span class="tx-11 tx-roboto tx-white-8">24% higher yesterday</span>
-                </div>
-              </div>
-              <div id="ch1" class="ht-50 tr-y-1"></div>
-            </div>
-          </div><!-- col-3 -->
-          <div class="col-sm-6 col-xl-3 mg-t-20 mg-sm-t-0">
-            <div class="bg-purple rounded overflow-hidden">
-              <div class="pd-x-20 pd-t-20 d-flex align-items-center">
-                <i class="ion ion-bag tx-60 lh-0 tx-white op-7"></i>
-                <div class="mg-l-20">
-                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">Today Sales</p>
-                  <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">$329,291</p>
-                  <span class="tx-11 tx-roboto tx-white-8">$390,212 before tax</span>
-                </div>
-              </div>
-              <div id="ch3" class="ht-50 tr-y-1"></div>
-            </div>
-          </div><!-- col-3 -->
-          <div class="col-sm-6 col-xl-3 mg-t-20 mg-xl-t-0">
-            <div class="bg-teal rounded overflow-hidden">
-              <div class="pd-x-20 pd-t-20 d-flex align-items-center">
-                <i class="ion ion-monitor tx-60 lh-0 tx-white op-7"></i>
-                <div class="mg-l-20">
-                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">% Unique Visits</p>
-                  <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">54.45%</p>
-                  <span class="tx-11 tx-roboto tx-white-8">23% average duration</span>
-                </div>
-              </div>
-              <div id="ch2" class="ht-50 tr-y-1"></div>
-            </div>
-          </div><!-- col-3 -->
-          <div class="col-sm-6 col-xl-3 mg-t-20 mg-xl-t-0">
-            <div class="bg-primary rounded overflow-hidden">
-              <div class="pd-x-20 pd-t-20 d-flex align-items-center">
-                <i class="ion ion-clock tx-60 lh-0 tx-white op-7"></i>
-                <div class="mg-l-20">
-                  <p class="tx-10 tx-spacing-1 tx-mont tx-semibold tx-uppercase tx-white-8 mg-b-10">Bounce Rate</p>
-                  <p class="tx-24 tx-white tx-lato tx-bold mg-b-0 lh-1">32.16%</p>
-                  <span class="tx-11 tx-roboto tx-white-8">65.45% on average time</span>
-                </div>
-              </div>
-              <div id="ch4" class="ht-50 tr-y-1"></div>
-            </div>
-          </div><!-- col-3 -->
-        </div><!-- row -->
+      <!-- form-layout --><div class="br-section-wrapper">
+      <h6 class="br-section-label">Login Details</h6>
+      <div class="bd bd-gray-300 rounded table-responsive">
+            <table class="table table-hover mg-b-0">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Vendor Name</th>
+                  <th>Shop Name</th>
+                  <th>IP Address</th>
+                  <th>Login Time</th>
+                    
+                </tr>
+              </thead>
+              <tbody>
+               <span> <tr>
+                  <th scope="row">1</th>
+                  <td>Tiger Nixon</td>
+                  <td>System Architect</td>
+                  <td>19.168.29.101</td>
+                  <td>2019-12-13 21:17</td>
+                </tr><span>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Garrett Winters</td>
+                  <td>Accountant</td>
+                  <td>192.168.31.32</td>
+                  <td>2019-10-15 21:18</td>
+                 
+                </tr>
+                
+              </tbody>
+            </table></div>
+          </div>
 
 
-      </div><!-- br-pagebody -->
+
+
       <footer class="br-footer">
-        <div class="footer-left">
-          <!-- <div class="mg-b-2">Copyright &copy; 2017. Bracket Plus. All Rights Reserved.</div> -->
-          <div>made by Mukul.</div>
-        </div>
+       
         <!-- <div class="footer-right d-flex align-items-center">
           <span class="tx-uppercase mg-r-10">Share:</span>
           <a target="_blank" class="pd-x-5" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//themepixels.me/bracketplus/intro"><i class="fab fa-facebook tx-20"></i></a>
@@ -405,6 +385,8 @@
     <script src="../js/map.shiftworker.js"></script>
     <script src="../js/ResizeSensor.js"></script>
     <script src="../js/dashboard.js"></script>
+    
+
     <script>
       $(function(){
         'use strict'
@@ -432,6 +414,8 @@
           }
         }
       });
+
+
     </script>
   </body>
 </html>
