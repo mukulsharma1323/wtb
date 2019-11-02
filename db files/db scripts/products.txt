@@ -1,0 +1,21 @@
+CREATE TABLE products (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+vendor_id VARCHAR(30) NOT NULL,
+brand_name VARCHAR(30),
+category VARCHAR(30),
+sub_category VARCHAR(30),
+product_name VARCHAR(30),
+product_code VARCHAR(30),
+description VARCHAR(30),
+image_url VARCHAR(30),
+quantity VARCHAR(30),
+MRP VARCHAR(30),
+selling_price VARCHAR(30),
+HSN_code VARCHAR(30), 
+fk_link VARCHAR(30),
+sd_link VARCHAR(30),
+az_link VARCHAR(30),
+x_link VARCHAR(30),
+y_link VARCHAR(30),
+reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)
