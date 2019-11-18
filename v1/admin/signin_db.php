@@ -9,7 +9,7 @@ if(isset($_POST['email']) && isset($_POST['password']))
 // echo "$Email";
 // echo "$Pass";
 // Checking the values are existing in the database or not
-$query = "SELECT * FROM `vendor` WHERE Email='$Email' and password='$Pass'";
+$query = "SELECT * FROM `admin` WHERE email='$Email' and password='$Pass'";
 $count = mysqli_num_rows($result);
 //If the posted values are equal to the database values, then session will be created for the user.
 if ($count == 1){

@@ -6,25 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Twitter -->
-    <meta name="twitter:site" content="@themepixels">
-    <meta name="twitter:creator" content="@themepixels">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bracket Plus">
-    <meta name="twitter:description" content="Premium Quality and Responsive UI for Dashboard.">
-    <meta name="twitter:image" content="http://themepixels.me/bracketplus/img/bracketplus-social.png">
-
-    <!-- Facebook -->
-    <meta property="og:url" content="http://themepixels.me/bracketplus">
-    <meta property="og:title" content="Bracket Plus">
-    <meta property="og:description" content="Premium Quality and Responsive UI for Dashboard.">
-
-    <meta property="og:image" content="http://themepixels.me/bracketplus/img/bracketplus-social.png">
-    <meta property="og:image:secure_url" content="http://themepixels.me/bracketplus/img/bracketplus-social.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="600">
-
     <!-- Meta -->
     <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
     <meta name="author" content="ThemePixels">
@@ -39,8 +20,6 @@
     <!-- Bracket CSS -->
     <link rel="stylesheet" href="../css/bracket.css">
 	
-
-
 </head>
 <body>
 	 <div class="d-flex align-items-center justify-content-center bg-br-primary ht-100v">
@@ -51,7 +30,7 @@
 
     <form action="signup_db.php" method="POST" >
         <div class="form-group">
-          <input type="email" class="form-control" name="email" placeholder="Enter your Email">
+          <input type="text" class="form-control" name="mobile" placeholder="Enter your Mobile">
         </div><!-- form-group -->
         <div class="form-group">
           <input type="password" class="form-control" name="password" placeholder="Enter your password">
@@ -61,10 +40,10 @@
         </div>
         <div class="form-group tx-12">By clicking the Sign Up button below, you agreed to our privacy policy and terms of use of our website.</div>
         <!-- <button type="submit" class="btn btn-info btn-block" value="submit" >Sign Up</button> -->
-        <input type="submit" class="btn btn-info btn-block" value="submit" name="">
+        <input type="submit" class="btn btn-info btn-block" value="Sign Up" name="">
     </form>
     
-        <div class="mg-t-40 tx-center">Have already account? <a href="login.html" class="tx-info">Sign In</a></div>
+        <div class="mg-t-40 tx-center">Have already account? <a href="signin.php" class="tx-info">Sign In</a></div>
       </div><!-- login-wrapper -->
     </div><!-- d-flex -->
 </body>

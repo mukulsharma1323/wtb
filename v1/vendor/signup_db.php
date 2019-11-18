@@ -4,9 +4,9 @@
 include('db_config.php');
 
 // receive values from HTML FORM as POST method 
-if(isset($_POST['email']) && isset($_POST['password']))
+if(isset($_POST['mobile']) && isset($_POST['password']))
 {
-  $Email=$_POST['email'];
+  $Email=$_POST['mobile'];
   $Password=$_POST['password'];
   $Shop_name=$_POST['shop_name'];
 // echo values to test the variables, if they have value or not.
