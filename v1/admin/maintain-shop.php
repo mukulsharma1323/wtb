@@ -25,9 +25,9 @@
   <body>
 
     <?php 
-      include'sidebar.php';
-      include'top-navbar.php';
-      include 'db_config.php';
+      include"sidebar.php";
+      include"top-navbar.php";
+      include "db_config.php";
        ?>
        <?php 
 
