@@ -27,6 +27,7 @@
     <?php 
       include'sidebar.php';
       include'top-navbar.php';
+      include 'db_config.php';
        ?>
 
     <!-- ########## START: MAIN PANEL ########## -->
@@ -38,7 +39,7 @@
           <!-- <p class="mg-b-0">Do bigger things with Bracket plus, the responsive bootstrap 4 admin template.</p> -->
         </div>
       </div>
-
+      <?php $results = mysqli_query($connection, "SELECT * FROM vendors"); ?>
       <div class="br-pagebody">
       <!-- form-layout --><div class="br-section-wrapper">
       <h6 class="br-section-label">Login Details</h6>
@@ -50,27 +51,21 @@
                   <th>Vendor Name</th>
                   <th>Shop Name</th>
                   <th>IP Address</th>
-                  <th>Login Time</th>
+                  <th>Registration Time</th>
                     
                 </tr>
               </thead>
               <tbody>
+                <?php while ($row = mysqli_fetch_array($results)) { ?>
                <span> <tr>
-                  <th scope="row">1</th>
-                  <td>Tiger Nixon</td>
-                  <td>System Architect</td>
-                  <td>19.168.29.101</td>
-                  <td>2019-12-13 21:17</td>
-                </tr><span>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Garrett Winters</td>
-                  <td>Accountant</td>
-                  <td>192.168.31.32</td>
-                  <td>2019-10-15 21:18</td>
-                 
-                </tr>
-                
+                  <th scope="row"><?php echo $row['id']; ?></th>
+                  <td><?php echo $row['firstname']; ?></td>
+                  <td><?php echo $row['shop_name']; ?></td>
+                  <td><?php echo $_SERVER['REMOTE_ADDR']; ?></td>
+                  <td><?php echo $row['reg_date']; ?></td>
+                </tr></span>
+               
+                <?php } ?>
               </tbody>
             </table></div>
           </div>
