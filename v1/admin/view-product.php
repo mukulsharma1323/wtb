@@ -30,6 +30,7 @@
     <?php 
       include'sidebar.php';
       include'top-navbar.php';
+      include 'db_config.php';
        ?>
 
     <!-- ########## START: MAIN PANEL ########## -->
@@ -41,7 +42,7 @@
           <!-- <p class="mg-b-0">Do bigger things with Bracket plus, the responsive bootstrap 4 admin template.</p> -->
         </div>
       </div>
-
+<?php $results = mysqli_query($connection, "SELECT * FROM products"); ?>
       <div class="br-pagebody">
       <!-- form-layout --><div class="br-section-wrapper">
       <h6 class="br-section-label">Edit/Delete Products</h6>
@@ -52,28 +53,29 @@
                   <th>ID</th>
                   <th>Product Name</th>
                   <th>Brand Name</th>
-                  <th>Price</th>
+                  <th>Vendor Name</th>
+                  <th>Price(Rs.)</th>
               
                 </tr>
               </thead>
               <tbody>
+              	 <?php while ($row = mysqli_fetch_array($results)) { 
+              	 	 $vid = $row['vendor_id'];
+              	     $result = mysqli_query($connection, "SELECT firstname FROM vendors WHERE id=$vid;");
+              	     $r = mysqli_fetch_row($result);
+              	 	?>
                <span> <tr>
-                  <th scope="row">1</th>
-                  <td>Tiger Nixon</td>
-                  <td>System Architect</td>
-                  <td>$320,800</td>
-                  <td><span><a href="edit-product.php" class="btn btn-primary btn-icon mg-r-5 mg-b-10"><div style="height:20px"><i class="fas fa-edit"></i></div></a><a href="delete-product.php" class="btn btn-primary btn-icon mg-r-5 mg-b-10"><div style="height:20px"><i class="fas fa-trash-alt"></i></div></a></span></td>
-
-                </tr><span>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Garrett Winters</td>
-                  <td>Accountant</td>
-                  <td>$170,750</td>
-                  <td><span><a href="edit-product.php" class="btn btn-primary btn-icon mg-r-5 mg-b-10"><div style="height:20px"><i class="fas fa-edit"></i></div></a><a href="edit-product.php" class="btn btn-primary btn-icon mg-r-5 mg-b-10"><div style="height:20px"><i class="fas fa-trash-alt"></i></div></a></span></td>
+                  <th scope="row"><?php echo $row['id']; ?></th>
+                  <td><?php echo $row['product_name']; ?></td>
+                   <td><?php echo $row['brand_name']; ?></td>
+                  <td><?php echo $r[0]; ?></td> 
                  
-                </tr>
+                  <td><?php echo $row['selling_price']; ?></td>
+                  <td><span><a href="edit-product.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-icon mg-r-5 mg-b-10"><div style="height:20px"><i class="fas fa-edit"></i></div></a><a href="delete-product.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-icon mg-r-5 mg-b-10"><div style="height:20px"><i class="fas fa-trash-alt"></i></div></a></span></td>
+
+                </tr></span>
                 
+                <?php } ?>
               </tbody>
             </table></div>
           </div>
