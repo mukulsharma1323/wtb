@@ -23,10 +23,42 @@
   <body>
 
     <?php 
-      include'sidebar.php';
-      include'top-navbar.php';
+      include 'sidebar.php';
+      
+      include 'db_config.php';
        ?>
+       <?php
+       	if(isset($_POST['update']))
+       	{
+       		$id = $_POST['id'];
+       		$brandname = $_POST["brandname"]; 
+			$category = $_POST["category"]; 
+			$subCategory = $_POST["subCategory"]; 
+			$productname = $_POST["productname"]; 
+			$productcode = $_POST["productcode"]; 
+			$productdescription = $_POST["productdescription"]; 
+			$productquantity = $_POST["productquantity"]; 
+			$mrp = $_POST["mrp"]; 
+			$sellingprice = $_POST["sellingprice"]; 
+			$hsncode = $_POST["hsncode"]; 
 
+			mysqli_query($connection, "UPDATE products SET brand_name='$brandname',
+									product_name='$productname',
+									category='$category',
+									sub_category='$subCategory',
+									product_code='$productcode',
+									description='$productdescription',
+									quantity='$productquantity',
+									MRP='$mrp',
+									selling_price='$sellingprice',
+									HSN_code='$hsncode' WHERE id=$id");
+			
+			header('location:view-product.php');
+			
+			
+       	}
+
+       ?>
     <!-- ########## START: MAIN PANEL ########## -->
     <div class="br-mainpanel">
       <div class="br-pagetitle">
@@ -36,25 +68,37 @@
           <!-- <p class="mg-b-0">Do bigger things with Bracket plus, the responsive bootstrap 4 admin template.</p> -->
         </div>
       </div>
+	<?php
+              if(isset($_GET['id'])) 
+              {
+                $id=$_GET['id'];
+                $result = mysqli_query($connection, "Select * FROM products WHERE id=$id");
+                $r = mysqli_fetch_array($result);
+                $bname = $r['brand_name'];
+                $pname = $r['product_name'];
+                $pcode = $r['product_code'];
+                $des = $r['description'];
+                $qua = $r['quantity'];
+                $mrp = $r['MRP'];
+                $sprice = $r['selling_price'];
+                $hsn = $r['HSN_code'];
 
-<form action="add_product_db.php" method="POST" >  
+
+              }
+           ?>
+<form action="edit-product.php" method="POST" >  
       <div class="br-pagebody">
         <div class="br-section-wrapper">
-          <?php 
-            if (isset($_GET["status"])) 
-              echo "Product Added Successfully"; 
-              echo "<br>"; 
-            ?>
-
-          <h6 class="br-section-label">Add Product</h6>
-
+          <h6 class="br-section-label">Edit Product</h6>
+          
+         
         <div class="form-layout form-layout-1">
             <div class="row mg-b-25">
               
               <div class="col-lg-12">
                 <div class="form-group">
                   <label for="brandName">Enter Brand Name*</label>
-                  <input type="text" name="brandname" parsley-trigger="change"  class="form-control" id="bName">
+                  <input type="text" name="brandname" parsley-trigger="change"  class="form-control" id="bName" value="<?php echo $bname;?>">
                 </div>
               </div><!-- col-4 -->
               <div class="col-lg-12">
@@ -83,48 +127,39 @@
               <div class="col-lg-12">
                 <div class="form-group">
                   <label for="productName">Enter Product Name*</label>
-                  <input type="text" name="productname" parsley-trigger="change"  class="form-control" id="pName">
+                  <input type="text" name="productname" parsley-trigger="change"  class="form-control"
+                  value="<?php echo $pname;?>" id="pName">
                 </div>
               </div>
               <div class="col-lg-12">
                 <div class="form-group">
                   <label for="productCode">Enter Product Code*</label>
-                  <input type="text" name="productcode" parsley-trigger="change"  class="form-control" id="pCode">
+                  <input type="text" name="productcode" parsley-trigger="change"  class="form-control" id="pCode" value="<?php echo $pcode;?>">
                 </div>
               </div>
               <div class="col-lg-12">
                 <div class="form-group">
                   <label for="productDescription">Enter Product Description*</label>
-                  <input type="text" name="productdescription" parsley-trigger="change"  class="form-control" id="pDescription">
+                  <input type="text" name="productdescription" parsley-trigger="change"  class="form-control" id="pDescription" value="<?php echo $des;?>">
                 </div>
               </div>
-              <div class="col-lg-12">
-                <div class="form-group">
-                <label for="profuctImage">Enter Product Image*</label><br>
-                <input type="file" name="productimage" id="file-1" class="inputfile"
-                    data-multiple-caption="{count} files selected" multiple>
-                    <label for="file-1" class="tx-white bg-info">
-                      <i class="icon ion-ios-upload-outline tx-24"></i>
-                      <span>Choose a file...</span>
-                    </label>
-                </div>
-              </div>
+              
               <div class="col-lg-12">
                 <div class="form-group">
                   <label for="productQuantity">Enter Product Quantity*</label>
-                  <input type="number" name="productquantity" parsley-trigger="change"  class="form-control" id="pQuantity">
+                  <input type="number" name="productquantity" parsley-trigger="change"  class="form-control" id="pQuantity" value="<?php echo $qua;?>">
                 </div>
               </div>
               <div class="col-lg-12">
                 <div class="form-group">
                   <label for="MRPPrice">Enter MRP Price*</label>
-                  <input type="text" name="mrp" parsley-trigger="change"  class="form-control" id="mrpPrice">
+                  <input type="text" name="mrp" parsley-trigger="change"  class="form-control" id="mrpPrice" value="<?php echo $mrp;?>">
                 </div>
               </div>
               <div class="col-lg-12">
                 <div class="form-group">
                   <label for="sellingPrice">Enter Selling/Discounted Price*</label>
-                  <input type="text" name="sellingprice" parsley-trigger="change"  class="form-control" id="sPrice">
+                  <input type="text" name="sellingprice" parsley-trigger="change"  class="form-control" id="sPrice"value="<?php echo $sprice;?>">
                 </div>
               </div>
                <div class="col-lg-12">
@@ -137,7 +172,8 @@
               </div>
             </div><!-- row -->
             <div class="form-layout-footer">
-              <button class="btn btn-info" value="submit">Save</button>
+            	<input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
+              <button class="btn btn-info" name="update" value="submit">Update</button>
             </div><!-- form-layout-footer -->
           </div><!-- form-layout -->
         </div>

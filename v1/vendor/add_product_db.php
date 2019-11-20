@@ -85,12 +85,14 @@ Values
   $result = mysqli_query($connection, $query);
   if($result)
   {
-    echo "Data created successfully";
+    // echo "Data created successfully";
+    header("location:http://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF'])."/add-product.php?status=success");
   }
   else
   {
-    echo " Failed";
-    echo("Error description: " . mysqli_error($connection));
+    // echo " Failed";
+    // echo("Error description: " . mysqli_error($connection));
+    header("location:http://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF'])."/error.php");
   }
 }
 ?>
