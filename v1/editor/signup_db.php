@@ -8,14 +8,14 @@ if(isset($_POST['mobile']) && isset($_POST['password']))
 {
   $Email=$_POST['mobile'];
   $Password=$_POST['password'];
-  $Shop_name=$_POST['shop_name'];
+  $code=$_POST['code'];
 // echo values to test the variables, if they have value or not.
 // echo "$Shop_name";
 // echo "$Password";
 // echo "$Email";
 // insert values into database
 
- $query="INSERT INTO vendor (Email,Password,Shop_Name)Values('$Email','$Password','$Shop_name')";
+ $query="INSERT INTO editors (Email,Password,Code)Values('$Email','$Password','$code')";
   $result = mysqli_query($connection, $query);
   if($result)
   {

@@ -12,7 +12,7 @@
 
       <div class="login-wrapper wd-300 wd-xs-350 pd-25 pd-xs-40 bg-white rounded shadow-base">
         <div class="signin-logo tx-center tx-28 tx-bold tx-inverse"><span class="tx-normal">[</span> Where is to<span class="tx-info"> Buy</span> <span class="tx-normal">]</span></div>
-        <div class="tx-center mg-b-60">Login panel for Vendor</div>
+        <div class="tx-center mg-b-60">Login panel for Editor</div>
 
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Enter your username">
