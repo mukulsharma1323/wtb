@@ -30,7 +30,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-3 logo-holder"> 
           <!-- ============================================================= LOGO ============================================================= -->
-          <div class="logo"> <a href="home.html">
+          <div class="logo"> <a href="index.php">
            <!-- <img src="assets/images/logo.png" alt="logo">  -->
            <h2 style="color:white; margin-top: 0px">Where Is To Buy</h2>
          </a> </div>
