@@ -25,7 +25,10 @@
 		<link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
 
 		
+<?php 
 
+include 'db_config.php';
+ ?>
 		
 		<!-- Icons/Glyphs -->
 		<link rel="stylesheet" href="assets/css/font-awesome.css">
@@ -34,14 +37,85 @@
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <?php 
 
+        if(isset($_POST['login'])){
+        	if(isset($_POST['email']) && isset($_POST['password']))
+					{
+					  $Email=$_POST['email'];
+					  $Pass=$_POST['password'];
+					  $res= mysqli_query($connection, "select * from users where email='$Email' and password='$Pass'") or die("Failed to query database".mysqli_error());
+					  $row= mysqli_fetch_array($res);
+					  if($row['email'] == $Email && $row['password'] == $Pass)
+					  {
+						header("location: index.php");
+					  }
+					  else
+					  {
+            	echo '<center><h4 style="color:red;">Invalid Username or Password</h4></center>';
+            }
+					}
+				}
+
+
+				if(isset($_POST['register']))
+				{
+					if(isset($_POST['email']) && isset($_POST['password']) && isset($_POST['firstname']) && 	
+						isset($_POST['lastname']) && isset($_POST['mobile']) && isset($_POST['city']) &&
+						isset($_POST['address']) && isset($_POST['pincode']))
+					{
+						if($_POST['password'] == $_POST['conpassword'])
+						{
+							$Email=$_POST['email'];
+						  $Password=$_POST['password'];
+						  $Firstname=$_POST['firstname'];
+						  $Lastname=$_POST['lastname'];
+						  $Mobile=$_POST['mobile'];
+						  $City=$_POST['city'];
+						  $Address=$_POST['address'];
+						  $Pincode=$_POST['pincode'];
+							$noonefound=0;
+							$re1= mysqli_query($connection, "select * from users");
+              while($row = mysqli_fetch_array($re1))
+              {
+                if($row['email'] == $Email)
+                {
+                  echo '<center><h3><b style ="color:red"> *This email is already registered.</b></h3></center>';
+                  $noonefound=1;
+                  break;
+                }
+              }
+              if(!$noonefound){
+							  $query="INSERT INTO users (firstname,lastname,mobile,email,password,city,address,pin) Values('$Firstname','$Lastname','$Mobile','$Email','$Password','$City','$Address','$Pincode')";
+							  $result = mysqli_query($connection, $query);
+							  if($result)
+							  {
+							    header("location: index.php");
+							  }
+							  else
+							  {
+							    echo "Error: " . $query . "<br>" . mysqli_error($connection);
+							  }
+  						}
+						}
+					  else
+					  {
+					  	echo '<center><h3><b style ="color:red"> *Both passwords must match</b></h3></center>';
+					  }
+					}
+					else
+					{
+						echo '<center><h3><b style ="color:red"> *Please provide all details</b></h3></center>';
+
+					}
+				}
+        ?>
+        
 
 	</head>
     <body class="cnt-home">
 
-<?php 
-include 'navbar.php'
- ?>
+
 
 <div class="breadcrumb">
 	<div class="container">
@@ -60,14 +134,14 @@ include 'navbar.php'
 		<a href="#" class="facebook-sign-in"><i class="fa fa-facebook"></i> Sign In with Facebook</a>
 		<a href="#" class="twitter-sign-in"><i class="fa fa-google"></i> Sign In with Google</a>
 	</div>
-	<form class="register-form outer-top-xs" role="form">
+	<form class="register-form outer-top-xs" role="form" action="signin.php" method="POST">
 		<div class="form-group">
 		    <label class="info-title" for="exampleInputEmail1">Email Address <span>*</span></label>
-		    <input type="email" class="form-control unicase-form-control text-input" id="exampleInputEmail1" >
+		    <input type="email" class="form-control unicase-form-control text-input" name="email" id="exampleInputEmail1" >
 		</div>
 	  	<div class="form-group">
 		    <label class="info-title" for="exampleInputPassword1">Password <span>*</span></label>
-		    <input type="password" class="form-control unicase-form-control text-input" id="exampleInputPassword1" >
+		    <input type="password" class="form-control unicase-form-control text-input" name="password" id="exampleInputPassword1" >
 		</div>
 		<div class="radio outer-xs">
 		  	<label>
@@ -75,7 +149,7 @@ include 'navbar.php'
 		  	</label>
 		  	<a href="#" class="forgot-password pull-right">Forgot your Password?</a>
 		</div>
-	  	<button type="submit" class="btn-upper btn btn-primary checkout-page-button">Login</button>
+	  	<button type="submit" name="login" class="btn-upper btn btn-primary checkout-page-button">Login</button>
 	</form>					
 </div>
 <!-- Sign-in -->
@@ -84,28 +158,44 @@ include 'navbar.php'
 <div class="col-md-6 col-sm-6 create-new-account">
 	<h4 class="checkout-subtitle">Create a new account</h4>
 	<p class="text title-tag-line">Create your new account.</p>
-	<form class="register-form outer-top-xs" role="form">
+	<form class="register-form outer-top-xs" role="form" action="signin.php" method="POST">
 		<div class="form-group">
 	    	<label class="info-title" for="exampleInputEmail2">Email Address <span>*</span></label>
-	    	<input type="email" class="form-control unicase-form-control text-input" id="exampleInputEmail2" >
+	    	<input type="email" name="email" class="form-control unicase-form-control text-input" id="exampleInputEmail2" >
 	  	</div>
         <div class="form-group">
-		    <label class="info-title" for="exampleInputEmail1">Name <span>*</span></label>
-		    <input type="email" class="form-control unicase-form-control text-input" id="exampleInputEmail1" >
+		    <label class="info-title" for="exampleInputEmail1"> First Name <span>*</span></label>
+		    <input type="text" name="firstname" class="form-control unicase-form-control text-input" id="exampleInputEmail1" >
 		</div>
-        <div class="form-group">
-		    <label class="info-title" for="exampleInputEmail1">Phone Number <span>*</span></label>
-		    <input type="email" class="form-control unicase-form-control text-input" id="exampleInputEmail1" >
+		<div class="form-group">
+		    <label class="info-title" for="exampleInputEmail1"> Last Name <span>*</span></label>
+		    <input type="text" name="lastname" class="form-control unicase-form-control text-input" id="exampleInputEmail1" >
 		</div>
         <div class="form-group">
 		    <label class="info-title" for="exampleInputEmail1">Password <span>*</span></label>
-		    <input type="email" class="form-control unicase-form-control text-input" id="exampleInputEmail1" >
+		    <input type="password" name="password" class="form-control unicase-form-control text-input" id="exampleInputEmail1" >
 		</div>
          <div class="form-group">
 		    <label class="info-title" for="exampleInputEmail1">Confirm Password <span>*</span></label>
-		    <input type="email" class="form-control unicase-form-control text-input" id="exampleInputEmail1" >
+		    <input type="password" name="conpassword" class="form-control unicase-form-control text-input" id="exampleInputEmail1" >
 		</div>
-	  	<button type="submit" class="btn-upper btn btn-primary checkout-page-button">Sign Up</button>
+		<div class="form-group">
+		    <label class="info-title" for="exampleInputEmail1">Phone Number <span>*</span></label>
+		    <input type="number" name="mobile" class="form-control unicase-form-control text-input" id="exampleInputEmail1" >
+		</div>
+		<div class="form-group">
+		    <label class="info-title" for="exampleInputEmail1">City <span>*</span></label>
+		    <input type="text" name="city" class="form-control unicase-form-control text-input" id="exampleInputEmail1" >
+		</div>
+		<div class="form-group">
+		    <label class="info-title" for="exampleInputEmail1">Adress <span>*</span></label>
+		    <textarea class="form-control unicase-form-control text-input" rows = "3" cols = "50" name = "address"  required></textarea>
+		</div>
+		<div class="form-group">
+		    <label class="info-title" for="exampleInputEmail1">Pin Code <span>*</span></label>
+		    <input type="number" name="pincode" class="form-control unicase-form-control text-input" id="exampleInputEmail1" >
+		</div>
+	  	<button type="submit" name="register" class="btn-upper btn btn-primary checkout-page-button">Sign Up</button>
 	</form>
 	
 	
