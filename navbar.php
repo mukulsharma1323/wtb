@@ -4,13 +4,14 @@
   <div class="top-bar animate-dropdown">
     <div class="container">
       <div class="header-top-inner">
-        <div class="cnt-account">
+        <!-- <div class="cnt-account">
           <ul class="list-unstyled">
             <li><a href="#"><i class="icon fa fa-user"></i>My Account</a></li>
             <li><a href="#"><i class="icon fa fa-heart"></i>Wishlist</a></li>
             <li><a href="#"><i class="icon fa fa-lock"></i>Login</a></li>
           </ul>
-        </div>
+        </div> -->
+
         <!-- /.cnt-account -->
         
         
@@ -45,13 +46,12 @@
             <form>
               <div class="control-group">
                 <ul class="categories-filter animate-dropdown">
-                  <li class="dropdown"> <a class="dropdown-toggle"  data-toggle="dropdown" href="category.html">Categories <b class="caret"></b></a>
+                  <li class="dropdown"> <a class="dropdown-toggle"  data-toggle="dropdown" href="category.php">Cities <b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu" >
-                      <li class="menu-header">Computer</li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Clothing</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Electronics</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Shoes</a></li>
-                      <li role="presentation"><a role="menuitem" tabindex="-1" href="category.html">- Watches</a></li>
+                      <!-- <li class="menu-header"></li> -->
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="category.php">Meerut</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="category.php">- Noida</a></li>
+                      <li role="presentation"><a role="menuitem" tabindex="-1" href="category.php">- More Coming Soon</a></li>
                     </ul>
                   </li>
                 </ul>
