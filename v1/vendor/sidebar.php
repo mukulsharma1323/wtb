@@ -16,6 +16,12 @@
           </a>
         </li>
         <li class="br-menu-item">
+          <a href="add-product-csv.php" class="br-menu-link">
+            <!-- <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i> -->
+            <span class="menu-item-label">Add Products by CSV</span>
+          </a>
+        </li>
+        <li class="br-menu-item">
           <a href="view-product.php" class="br-menu-link ">
             <!-- <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i> -->
             <span class="menu-item-label">View Products</span>
