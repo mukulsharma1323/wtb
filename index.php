@@ -1255,7 +1255,7 @@ include 'navbar.php'
         <!-- ============================================== BEST SELLER ============================================== -->
 
         <div class="best-deal wow fadeInUp outer-bottom-xs">
-          <h3 class="section-title">Best seller</h3>
+          <h3 class="section-title">Best Sellers Near You</h3>
           <div class="sidebar-widget-body outer-top-xs">
             <div class="owl-carousel best-seller custom-carousel owl-theme outer-top-xs">
               <div class="item">
@@ -1274,9 +1274,9 @@ include 'navbar.php'
                         <!-- /.col -->
                         <div class="col2 col-xs-7">
                           <div class="product-info">
-                            <h3 class="name"><a href="#">Floral Print Buttoned</a></h3>
+                            <h3 class="name"><a href="#">Shubam Electronics</a></h3>
                             <div class="rating rateit-small"></div>
-                            <div class="product-price"> <span class="price"> Rs.450.99 </span> </div>
+                            <div class="product-price"> <span class="price">Near Ghnata ghar,<br> Old colony </span> </div>
                             <!-- /.product-price -->
 
                           </div>
