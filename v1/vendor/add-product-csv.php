@@ -112,7 +112,7 @@ $(document).ready(function() {
                     <label class="col-md-4 control-label" style="font-size: 19px;">Choose CSV
                         File</label> <input type="file" name="file"
                         id="file" accept=".csv">
-                    <button type="submit" id="submit" name="import" class="btn-submit">Import</button>
+                    <button type="submit" id="submit" name="import" class="btn btn-info">Import</button>
                     <br />
 
                 </div>
