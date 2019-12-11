@@ -42,8 +42,7 @@
  <?php 
  		include 'db_config.php';
  		include 'sidebar.php';
- 		include 'top-navbar.php';
-      
+    include 'top-navbar.php';
      ?>
        <?php
        	if(isset($_POST['update']))
@@ -56,17 +55,19 @@
 			$password = $_POST["password"];
 			$city = $_POST["city"];
 			$address = $_POST["address"];
-			$Code = $_POST["code"];
-			$pin = $_POST["pin"];     
-			$query = "UPDATE editors SET firstname='$fname',
+      $pinc = $_POST["pincode"];
+			$shop = $_POST['shopname'];
+      $status = $_POST['status'];     
+			$query = "UPDATE vendors SET firstname='$fname',
 									lastname='$lname',
 									mobile='$mobile',
 									email='$email',
-									Password='$password',
+									password='$password',
 									city='$city',
 									address='$address',
-									Code='$Code',
-									pin='$pin'
+                  pinc='$pinc',
+									shop_name='$shop',
+                  status='$status'
 									WHERE id=$id";
 			$result = mysqli_query($connection,$query);
 			
@@ -109,18 +110,18 @@
       <?php
               
                 $id=1;
-                $result = mysqli_query($connection, "Select * FROM editors WHERE id=$id");
+                $result = mysqli_query($connection, "Select * FROM vendors WHERE id=$id");
                 $r = mysqli_fetch_array($result);
                 $fname = $r['firstname'];
                 $lname = $r['lastname'];
                 $mobile = $r['mobile'];
                 $email = $r['email'];
+                $address = $r['address'];
                 $password = $r['password'];
                 $city = $r['city'];
-                $address = $r['address'];
-                $code = $r['Code'];
-                $pin = $r['pin']
-
+                $code = $r['pinc'];
+                $shop = $r['shop_name'];
+                $status = $r['status'];
 
               ?>
 <form action="profile.php" method="POST">
@@ -171,21 +172,32 @@
               <div class="col-lg-6">
                 <div class="form-group">
                   <label for="brandName">Address*</label>
-                  <textarea class="form-control unicase-form-control text-input" rows = "3" cols = "50" name = "address"required><?php echo $address;?> 	</textarea>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <label for="brandName">Code*</label>
-                  <input type="number" name="code" parsley-trigger="change"  class="form-control" id="code" value="<?php echo $code;?>" required>
+                  <textarea class="form-control unicase-form-control text-input" rows = "3" cols = "50" name = "address" required><?php echo $address;?></textarea>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="form-group">
                   <label for="brandName">Pin Code*</label>
-                  <input type="number" name="pin" parsley-trigger="change"  class="form-control" id="pin" value="<?php echo $pin;?>" required>
+                  <input type="number" name="pincode" parsley-trigger="change"  class="form-control" id="code" value="<?php echo $code;?>" required>
                 </div>
               </div>
+              
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="brandName">Shop Name*</label>
+                  <input type="text" name="shopname" parsley-trigger="change"  class="form-control" id="sname" value="<?php echo $shop;?>" required>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="brandName">Shop Status*</label>
+                  <select class="form-control" name="status">
+                      <option value="Enable" selected>Enable</option>
+                      <option value="Disable">Disable</option>
+                  </select>
+                </div>
+              </div>
+              
                 
                 </div>
                               <div class="tx-center mg-t-15 mg-xs-t-30 ">
