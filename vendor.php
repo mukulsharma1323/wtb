@@ -3,13 +3,14 @@
 	<head>
 		<!-- Meta -->
 		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
-	    <meta name="keywords" content="">
+	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
 	    <meta name="robots" content="all">
 
-	    <title>Whereistobuy</title>
+	    <title>Where is to buy</title>
 
 	    <!-- Bootstrap Core CSS -->
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -22,7 +23,7 @@
 		<link rel="stylesheet" href="assets/css/animate.min.css">
 		<link rel="stylesheet" href="assets/css/rateit.css">
 		<link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
-        <link href="assets/css/lightbox.css" rel="stylesheet">
+
 
 
 
@@ -34,272 +35,114 @@
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
-        <style type="text/css">
-        	.flexImage{
-				height: 200px;
-				width: 200px;
-				}
-        </style>
+
 	</head>
     <body class="cnt-home">
 		<!-- ============================================== HEADER ============================================== -->
-<?php
-include 'navbar.php'
-?>
+		<?php
+		include 'navbar.php'
+		?>
 <!-- ============================================== HEADER : END ============================================== -->
 <div class="breadcrumb">
 	<div class="container">
 		<div class="breadcrumb-inner">
 			<ul class="list-inline list-unstyled">
 				<li><a href="#">Home</a></li>
-				<li><a href="#">Clothing</a></li>
-				<li class='active'>Floral Print Buttoned</li>
+				<li class='active'>Seller</li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
 </div><!-- /.breadcrumb -->
-<div class="body-content outer-top-xs">
-	<div class='container'>
-		<div class='row single-product'>
-			<div class='col-md-12'>
-            <div class="detail-block">
-				<div class="row  wow fadeInUp">
 
-					     <div class="col-xs-12 col-sm-6 col-md-5 gallery-holder">
-    <div class="product-item-holder size-big single-product-gallery small-gallery">
+<div class="body-content">
+	<div class="container">
+		<div class="checkout-box ">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="panel-group checkout-steps" id="accordion">
+						<!-- checkout-step-01  -->
+<div class="panel panel-default checkout-step-01">
 
-        <div id="owl-single-product">
-            <div class="single-product-gallery-item" id="slide1">
-                <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p2.jpg">
-                    <img class="img-responsive" alt=""  src="assets/images/blank.gif" data-echo="assets/images/products/p2.jpg" />
-                </a>
-            </div><!-- /.single-product-gallery-item -->
-        </div><!-- /.single-product-slider -->
-    </div><!-- /.single-product-gallery -->
-</div><!-- /.gallery-holder -->
-					<div class='col-sm-6 col-md-7 product-info-block'>
-						<div class="product-info">
-							<h1 class="name">Floral Print Buttoned</h1>
+	<!-- panel-heading -->
+		<div class="panel-heading">
+	          <span  ><h2 style="padding:10px;text-align:center">Kumar Electronics</h2></span>
+    </div>
+    <!-- panel-heading -->
 
-							<div class="rating-reviews m-t-20">
-								<div class="row">
-									<div class="col-sm-3">
-										<div class="rating rateit-small"></div>
-									</div>
-									<!-- <div class="col-sm-8">
-										<div class="reviews">
-											<a href="#" class="lnk">(13 Reviews)</a>
-										</div>
-									</div> -->
-								</div><!-- /.row -->
-							</div><!-- /.rating-reviews -->
+	<div id="collapseOne" class="panel-collapse collapse in">
 
-							<div class="stock-container info-container m-t-10">
-								<div class="row">
-									<div class="col-sm-2">
-										<div class="stock-box">
-											<span class="label">Availability :</span>
-										</div>
-									</div>
-									<div class="col-sm-9">
-										<div class="stock-box">
-											<span class="value">In Stock</span>
-										</div>
-									</div>
-								</div><!-- /.row -->
-							</div><!-- /.stock-container -->
+		<!-- panel-body  -->
+	    <div class="panel-body">
+			<div class="row">
 
-							<div class="description-container m-t-20">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-							</div><!-- /.description-container -->
+				<!-- guest-login -->
+				<div class="col-md-6 col-sm-6 guest-login">
+					<div class="form-group">
+						<label class="info-title" for="exampleInputEmail1" style="font-size:20px" >Name </label><br>
+						<label class="info-title" style="font-size:15px;text-decoration: underline;color:red">Pankaj Kumar </label>
+					</div>
+					<div class="form-group">
+						<label class="info-title" for="exampleInputEmail1" style="font-size:20px" >Phone </label><br>
+						<label class="info-title" style="font-size:15px;text-decoration: underline;color:red">John Doe </label>
+					</div>
+					<div class="form-group">
+						<label class="info-title" for="exampleInputEmail1" style="font-size:20px" >Address </label><br>
+						<label class="info-title" style="font-size:15px;text-decoration: underline;color:red">Keshav Nagar, Hapur Road</label>
+					</div>
+				</div>
+				<!-- guest-login -->
 
-							<div class="price-container info-container m-t-20">
-								<div class="row">
+				<!-- already-registered-login -->
+				<div class="col-md-6 col-sm-6 already-registered-login">
+					<div class="form-group">
+						<label class="info-title" for="exampleInputEmail1" style="font-size:20px" >Email Address </label><br>
+						<label class="info-title" style="font-size:15px;text-decoration: underline;color:red">seller@mail.com </label>
+					</div>
+						<div class="form-group">
+					    <label class="info-title" for="exampleInputEmail1" style="font-size:20px" >Working Hour </label><br>
+					    <label class="info-title" style="font-size:15px;text-decoration: underline;color:red">10:00 AM - 10:00PM </label>
+					  </div>
+						<div class="form-group">
+					    <label class="info-title" for="exampleInputEmail1" style="font-size:20px" >Days Off/ Vaction Mode </label><br>
+					    <label class="info-title" style="font-size:15px;text-decoration: underline;color:red">Sunday </label>
+					  </div>
+				</div>
+				<!-- already-registered-login -->
+
+			</div>
+		</div>
+		<!-- panel-body  -->
+
+	</div><!-- row -->
+</div>
 
 
-									<div class="col-sm-6">
-										<div class="price-box">
-											<span class="price">Rs.800.00</span>
-											<span class="price-strike">Rs.900.00</span>
-										</div>
-									</div>
-
-									<!-- <div class="col-sm-6">
-										<div class="favorite-button m-t-10">
-											<a class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Wishlist" href="#">
-											    <i class="fa fa-heart"></i>
-											</a>
-											<a class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Add to Compare" href="#">
-											   <i class="fa fa-signal"></i>
-											</a>
-											<a class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="E-mail" href="#">
-											    <i class="fa fa-envelope"></i>
-											</a>
-										</div>
-									</div> -->
-
-								</div><!-- /.row -->
-							</div><!-- /.price-container -->
-						</div><!-- /.product-info -->
-					</div><!-- /.col-sm-7 -->
-				</div><!-- /.row -->
-      </div>
-
-				<!-- ============================================== UPSELL PRODUCTS ============================================== -->
-<section class="section featured-product wow fadeInUp">
-	<h3 class="section-title">online similar products</h3>
-	<div class="owl-carousel home-owl-carousel upsell-product custom-carousel owl-theme outer-top-xs">
-		<div class="item item-carousel">
-			<div class="products">
-				<div class="product">
-					<div class="product-image">
-						<div class="image">
-							<a href="detail.html"><img class="flexImage" src="assets/images/products/p1.jpg" alt=""></a>
-						</div><!-- /.image -->
-					</div><!-- /.product-image -->
-					<div class="product-info text-left">
-						<h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-						<div class="product-price">
-							<span class="price">Rs.650.99</span><span class="price-before-discount">Rs. 800</span>
-						</div><!-- /.product-price -->
-					</div><!-- /.product-info -->
-				</div><!-- /.product -->
-			</div><!-- /.products -->
-		</div><!-- /.item -->
-
-		<div class="item item-carousel">
-			<div class="products">
-				<div class="product">
-					<div class="product-image">
-						<div class="image">
-							<a href="detail.html"><img class="flexImage" src="assets/images/products/p2.jpg" alt=""></a>
-						</div><!-- /.image -->
-					</div><!-- /.product-image -->
-					<div class="product-info text-left">
-						<h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-						<div class="product-price">
-							<span class="price">Rs.650.99</span><span class="price-before-discount">Rs. 800</span>
-						</div><!-- /.product-price -->
-					</div><!-- /.product-info -->
-				</div><!-- /.product -->
-			</div><!-- /.products -->
-		</div><!-- /.item -->
-
-		<div class="item item-carousel">
-			<div class="products">
-				<div class="product">
-					<div class="product-image">
-						<div class="image">
-							<a href="detail.html"><img class="flexImage" src="assets/images/products/p3.jpg" alt=""></a>
-						</div><!-- /.image -->
-					</div><!-- /.product-image -->
-					<div class="product-info text-left">
-						<h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-						<div class="product-price">
-							<span class="price">Rs.650.99</span><span class="price-before-discount">Rs. 800</span>
-						</div><!-- /.product-price -->
-					</div><!-- /.product-info -->
-				</div><!-- /.product -->
-			</div><!-- /.products -->
-		</div><!-- /.item -->
-
-		<div class="item item-carousel">
-			<div class="products">
-				<div class="product">
-					<div class="product-image">
-						<div class="image">
-							<a href="detail.html"><img class="flexImage" src="assets/images/products/p4.jpg" alt=""></a>
-						</div><!-- /.image -->
-					</div><!-- /.product-image -->
-					<div class="product-info text-left">
-						<h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-						<div class="product-price">
-							<span class="price">Rs.650.99</span><span class="price-before-discount">Rs. 800</span>
-						</div><!-- /.product-price -->
-					</div><!-- /.product-info -->
-				</div><!-- /.product -->
-			</div><!-- /.products -->
-		</div><!-- /.item -->
-	</div><!-- /.products -->
-</div><!-- /.item -->
-</div><!-- /.home-owl-carousel -->
-</section><!-- /.section -->
-<!-- ============================================== UPSELL PRODUCTS : END ============================================== -->
-
-			</div><!-- /.col -->
-			<div class="clearfix"></div>
-		</div><!-- /.row -->
+					</div><!-- /.checkout-steps -->
+				</div>
+				<div class="col-md-4">
+					<!-- checkout-progress-sidebar -->
+<div class="checkout-progress-sidebar ">
+	<div class="panel-group">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+		    	<h4 class="unicase-checkout-title">Seller Category</h4>
+		    </div>
+		    <div class="">
+				<ul class="nav nav-checkout-progress list-unstyled">
+					<li><a href="#">Electronics</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- checkout-progress-sidebar -->				</div>
+			</div><!-- /.row -->
+		</div><!-- /.checkout-box -->
 		<!-- ============================================== BRANDS CAROUSEL ============================================== -->
-<div id="brands-carousel" class="logo-slider wow fadeInUp">
-
-		<div class="logo-slider-inner">
-			<div id="brand-slider" class="owl-carousel brand-slider custom-carousel owl-theme">
-				<div class="item m-t-15">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand1.png" src="assets/images/blank.gif" alt="">
-					</a>
-				</div><!--/.item-->
-
-				<div class="item m-t-10">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand2.png" src="assets/images/blank.gif" alt="">
-					</a>
-				</div><!--/.item-->
-
-				<div class="item">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand3.png" src="assets/images/blank.gif" alt="">
-					</a>
-				</div><!--/.item-->
-
-				<div class="item">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand4.png" src="assets/images/blank.gif" alt="">
-					</a>
-				</div><!--/.item-->
-
-				<div class="item">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand5.png" src="assets/images/blank.gif" alt="">
-					</a>
-				</div><!--/.item-->
-
-				<div class="item">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand6.png" src="assets/images/blank.gif" alt="">
-					</a>
-				</div><!--/.item-->
-
-				<div class="item">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand2.png" src="assets/images/blank.gif" alt="">
-					</a>
-				</div><!--/.item-->
-
-				<div class="item">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand4.png" src="assets/images/blank.gif" alt="">
-					</a>
-				</div><!--/.item-->
-
-				<div class="item">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand1.png" src="assets/images/blank.gif" alt="">
-					</a>
-				</div><!--/.item-->
-
-				<div class="item">
-					<a href="#" class="image">
-						<img data-echo="assets/images/brands/brand5.png" src="assets/images/blank.gif" alt="">
-					</a>
-				</div><!--/.item-->
-		    </div><!-- /.owl-carousel #logo-slider -->
-		</div><!-- /.logo-slider-inner -->
-
-</div><!-- /.logo-slider -->
+<br>
 <!-- ============================================== BRANDS CAROUSEL : END ============================================== -->	</div><!-- /.container -->
 </div><!-- /.body-content -->
-
+<!-- ============================================================= FOOTER ============================================================= -->
 <!-- ============================================================= FOOTER ============================================================= -->
 <footer id="footer" class="footer color-bg">
 
@@ -453,7 +296,6 @@ include 'navbar.php'
     <script src="assets/js/bootstrap-select.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
-
 
 
 

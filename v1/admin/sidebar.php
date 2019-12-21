@@ -10,12 +10,6 @@
           </a>
         </li>
         <li class="br-menu-item">
-          <a href="add-product.php" class="br-menu-link active">
-            <!-- <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i> -->
-            <span class="menu-item-label">Add Products</span>
-          </a>
-        </li>
-        <li class="br-menu-item">
           <a href="view-product.php" class="br-menu-link ">
             <!-- <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i> -->
             <span class="menu-item-label">View Products</span>
@@ -30,11 +24,11 @@
         <li class="br-menu-item">
           <a href="login-detail.php" class="br-menu-link ">
             <!-- <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i> -->
-            <span class="menu-item-label">Vendor Details</span>
+            <span class="menu-item-label">Vendor Login Details</span>
           </a>
         </li>
       </ul><!-- br-sideleft-menu -->
-      
+
       <br>
     </div><!-- br-sideleft -->
     <!-- ########## END: LEFT PANEL ########## -->

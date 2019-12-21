@@ -39,7 +39,7 @@
   </head>
 
   <body>
- <?php 
+ <?php
  		include 'db_config.php';
  		include 'sidebar.php';
     include 'top-navbar.php';
@@ -48,7 +48,7 @@
        	if(isset($_POST['update']))
        	{
        		$id = 1;
-       		$fname = $_POST["firstname"]; 
+       		$fname = $_POST["firstname"];
 			$lname = $_POST["lastname"];
 			$mobile = $_POST["mobile"];
 			$email = $_POST["email"];
@@ -57,7 +57,7 @@
 			$address = $_POST["address"];
       $pinc = $_POST["pincode"];
 			$shop = $_POST['shopname'];
-      $status = $_POST['status'];     
+      $status = $_POST['status'];
 			$query = "UPDATE vendors SET firstname='$fname',
 									lastname='$lname',
 									mobile='$mobile',
@@ -70,7 +70,7 @@
                   status='$status'
 									WHERE id=$id";
 			$result = mysqli_query($connection,$query);
-			
+
 			if($result)
 			{
 				header("location: profile.php");
@@ -79,8 +79,8 @@
 			{
 				echo "Error: " . $query . "<br>" . mysqli_error($connection);
 			}
-			
-			
+
+
        	}
 
        ?>
@@ -89,11 +89,11 @@
 
       <div class="card shadow-base bd-0 rounded-0 widget-4">
         <div class="card-header ht-75">
-          
+
         </div><!-- card-header -->
         <div class="card-body">
           <div class="card-profile-img">
-            <img src="https://via.placeholder.com/500" alt="">
+            <img src="../img/blank-profile.png" alt="">
           </div><!-- card-profile-img -->
           <!-- <h4 class="tx-normal tx-roboto tx-white">Katherine M. Pechon</h4> -->
           <!-- <p class="mg-b-25">Wine Connoisseur</p> -->
@@ -108,7 +108,7 @@
         </ul>
       </div>
       <?php
-              
+
                 $id=1;
                 $result = mysqli_query($connection, "Select * FROM vendors WHERE id=$id");
                 $r = mysqli_fetch_array($result);
@@ -131,7 +131,7 @@
             <div class="col-lg-12">
               <div class="card pd-20 pd-xs-30 shadow-base bd-0 mg-t-30">
                 <div class="row">
-                  
+
               <div class="col-lg-6">
                 <div class="form-group">
                   <label for="brandName">First Name*</label>
@@ -181,7 +181,7 @@
                   <input type="number" name="pincode" parsley-trigger="change"  class="form-control" id="code" value="<?php echo $code;?>" required>
                 </div>
               </div>
-              
+
               <div class="col-lg-6">
                 <div class="form-group">
                   <label for="brandName">Shop Name*</label>
@@ -197,8 +197,8 @@
                   </select>
                 </div>
               </div>
-              
-                
+
+
                 </div>
                               <div class="tx-center mg-t-15 mg-xs-t-30 ">
 
@@ -208,10 +208,10 @@
 
 
             </div><!-- col-lg-8 -->
-            
+
           </div><!-- row -->
         </div><!-- tab-pane -->
-       
+
         <!-- <div class="tab-pane fade" id="photos">
           <div class="row">
             <div class="col-lg-12">
@@ -220,10 +220,10 @@
 
               </div>
             </div>
-            
+
           </div>
         </div> -->
-        
+
       </div>
 </form>
       <!-- br-pagebody -->

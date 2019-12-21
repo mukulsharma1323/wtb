@@ -3,18 +3,18 @@ $conn = mysqli_connect("localhost", "root", "", "witb");
 
 
 if (isset($_POST["import"])) {
-    
+
     $fileName = $_FILES["file"]["tmp_name"];
-    
+
     if ($_FILES["file"]["size"] > 0) {
-        
+
         $file = fopen($fileName, "r");
-        
+
         while (($column = fgetcsv($file, 10000, ",")) !== FALSE) {
             $sqlInsert = "INSERT into products (vendor_id,brand_name,category,sub_category,product_name,product_code,description, image_url,quantity, MRP,selling_price, HSN_code)
                    values ('" . $column[0] . "','" . $column[1] . "','" . $column[2] . "','" . $column[3] . "','" . $column[4] . "','" . $column[5] . "','" . $column[6] . "','" . $column[7] . "','" . $column[8] . "','" . $column[9] . "','" . $column[10] . "','" . $column[11] . "')";
             $result = mysqli_query($conn, $sqlInsert);
-            
+
             if (! empty($result)) {
                 $type = "success";
                 $message = "Product uploaded successfully.";
@@ -79,13 +79,10 @@ $(document).ready(function() {
 
   <body>
 
-    <?php 
+    <?php
       include 'sidebar.php';
       include'top-navbar.php';
        ?>
-       
-
-
 
     <!-- ########## START: MAIN PANEL ########## -->
     <div class="br-mainpanel">
@@ -101,12 +98,10 @@ $(document).ready(function() {
       <div class="br-pagebody">
         <div class="br-section-wrapper">
           <h2 style="color: black;">Upload CSV file </h2>
-    
-    
-    <div class="outer-scontainer">
-        
 
-            <form class="form-horizontal" action="" method="post"
+
+    <div class="outer-scontainer">
+  <form class="form-horizontal" action="" method="post"
                 name="frmCSVImport" id="frmCSVImport" enctype="multipart/form-data">
                 <div class="input-row">
                     <label class="col-md-4 control-label" style="font-size: 19px;">Choose CSV
@@ -118,20 +113,14 @@ $(document).ready(function() {
                 </div>
 
             </form>
-
+            <a href="productCSV.csv" class="btn btn-success" >Download Sample File</a>
         </div>
-               
+
     </div>
         </div>
-               
-    
 
-
-
-      <?php 
+      <?php
       include'footer.php';
        ?>
-
-
   </body>
 </html>

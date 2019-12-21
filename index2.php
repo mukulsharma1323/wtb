@@ -63,8 +63,8 @@ include 'navbar.php'
                 <div class="caption bg-color vertical-center text-left">
                   <div class="slider-header fadeInDown-1">Top Brands</div>
                   <div class="big-text fadeInDown-1"> New Collections </div>
-                  <!-- <div class="excerpt fadeInDown-2 hidden-xs"> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span> </div> -->
-                  <!-- <div class="button-holder fadeInDown-3"> <a href="index.php?page=single-product" class="btn-lg btn btn-uppercase btn-primary shop-now-button">Shop Now</a> </div> -->
+                  <div class="excerpt fadeInDown-2 hidden-xs"> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span> </div>
+                  <div class="button-holder fadeInDown-3"> <a href="index.php?page=single-product" class="btn-lg btn btn-uppercase btn-primary shop-now-button">Shop Now</a> </div>
                 </div>
                 <!-- /.caption -->
               </div>
@@ -74,10 +74,10 @@ include 'navbar.php'
             <div class="item" style="background-image: url(assets/images/sliders/02.jpg);">
               <div class="container-fluid">
                 <div class="caption bg-color vertical-center text-left">
-                  <div class="slider-header fadeInDown-1">Spring 2020</div>
+                  <div class="slider-header fadeInDown-1">Spring 2016</div>
                   <div class="big-text fadeInDown-1"> Women <span class="highlight">Fashion</span> </div>
-                  <!-- <div class="excerpt fadeInDown-2 hidden-xs"> <span>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</span> </div> -->
-                  <!-- <div class="button-holder fadeInDown-3"> <a href="index.php?page=single-product" class="btn-lg btn btn-uppercase btn-primary shop-now-button">Shop Now</a> </div> -->
+                  <div class="excerpt fadeInDown-2 hidden-xs"> <span>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</span> </div>
+                  <div class="button-holder fadeInDown-3"> <a href="index.php?page=single-product" class="btn-lg btn btn-uppercase btn-primary shop-now-button">Shop Now</a> </div>
                 </div>
                 <!-- /.caption -->
               </div>
@@ -150,13 +150,13 @@ include 'navbar.php'
         <div id="product-tabs-slider" class="scroll-tabs outer-top-vs wow fadeInUp">
           <div class="more-info-tab clearfix ">
             <h3 class="new-product-title pull-left">New Products</h3>
-            <!-- <ul class="nav nav-tabs nav-tab-line pull-right" id="new-products-1">
+            <ul class="nav nav-tabs nav-tab-line pull-right" id="new-products-1">
               <li class="active"><a data-transition-type="backSlide" href="#all" data-toggle="tab">All</a></li>
               <li><a data-transition-type="backSlide" href="#smartphone" data-toggle="tab">Mobiles</a></li>
               <li><a data-transition-type="backSlide" href="#laptop" data-toggle="tab">Laptops</a></li>
               <li><a data-transition-type="backSlide" href="#apple" data-toggle="tab">Air Conditioners
               </a></li>
-            </ul> -->
+            </ul>
             <!-- /.nav-tabs -->
           </div>
           <div class="tab-content outer-top-xs">
@@ -183,7 +183,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -217,7 +217,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -252,7 +252,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -324,7 +324,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -359,7 +359,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -403,7 +403,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -438,7 +438,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -473,7 +473,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -508,7 +508,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -543,7 +543,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -578,7 +578,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -622,7 +622,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                           
                           </div>
                           <!-- /.action -->
                         </div>
@@ -657,7 +657,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -692,7 +692,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -727,7 +727,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -762,7 +762,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -797,7 +797,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -842,7 +842,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -875,7 +875,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -908,7 +908,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -941,7 +941,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -974,7 +974,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -1007,7 +1007,7 @@ include 'navbar.php'
                         <!-- /.product-info -->
                         <div class="cart clearfix animate-effect">
                           <div class="action">
-
+                            
                           </div>
                           <!-- /.action -->
                         </div>
@@ -1060,7 +1060,7 @@ include 'navbar.php'
                   <!-- /.product-info -->
                   <div class="cart clearfix animate-effect">
                     <div class="action">
-
+                      
                     </div>
                     <!-- /.action -->
                   </div>
@@ -1095,7 +1095,7 @@ include 'navbar.php'
                   <!-- /.product-info -->
                   <div class="cart clearfix animate-effect">
                     <div class="action">
-
+                      
                     </div>
                     <!-- /.action -->
                   </div>
@@ -1130,7 +1130,7 @@ include 'navbar.php'
                   <!-- /.product-info -->
                   <div class="cart clearfix animate-effect">
                     <div class="action">
-
+                      
                     </div>
                     <!-- /.action -->
                   </div>
@@ -1165,7 +1165,7 @@ include 'navbar.php'
                   <!-- /.product-info -->
                   <div class="cart clearfix animate-effect">
                     <div class="action">
-
+                      
                     </div>
                     <!-- /.action -->
                   </div>
@@ -1200,7 +1200,7 @@ include 'navbar.php'
                   <!-- /.product-info -->
                   <div class="cart clearfix animate-effect">
                     <div class="action">
-
+                      
                     </div>
                     <!-- /.action -->
                   </div>
@@ -1235,7 +1235,7 @@ include 'navbar.php'
                   <!-- /.product-info -->
                   <div class="cart clearfix animate-effect">
                     <div class="action">
-
+                      
                     </div>
                     <!-- /.action -->
                   </div>
@@ -1260,82 +1260,61 @@ include 'navbar.php'
             <div class="owl-carousel best-seller custom-carousel owl-theme outer-top-xs">
               <div class="item">
                 <div class="products best-product">
+                  <div class="product">
+                    <div class="product-micro">
+                      <div class="row product-micro-row">
+                        <div class="col col-xs-5">
+                          <div class="product-image">
+                            <div class="image"> <a href="#"> <img src="assets/images/products/p20.jpg" alt=""> </a> </div>
+                            <!-- /.image -->
 
-                  <div class="product">
-                    <div class="product-micro">
-                      <div class="row product-micro-row">
-                        <div class="col col-xs-4">
-                          <div class="product-image">
-                            <div class="image"> <a href="vendor.php"> <img src="assets/images/seller.jpg" alt=""> </a> </div>
                           </div>
+                          <!-- /.product-image -->
                         </div>
+                        <!-- /.col -->
                         <div class="col2 col-xs-7">
                           <div class="product-info">
-                            <h4 class="price"><a href="vendor.php">Shubam Electronics</a></h4>
+                            <h3 class="name"><a href="#">Shubam Electronics</a></h3>
                             <div class="rating rateit-small"></div>
                             <div class="product-price"> <span class="price">Near Ghnata ghar,<br> Old colony </span> </div>
+                            <!-- /.product-price -->
+
                           </div>
                         </div>
+                        <!-- /.col -->
                       </div>
+                      <!-- /.product-micro-row -->
                     </div>
+                    <!-- /.product-micro -->
+
                   </div>
                   <div class="product">
                     <div class="product-micro">
                       <div class="row product-micro-row">
-                        <div class="col col-xs-4">
+                        <div class="col col-xs-5">
                           <div class="product-image">
-                            <div class="image"> <a href="vendor.php"> <img src="assets/images/seller.jpg" alt=""> </a> </div>
+                            <div class="image"> <a href="#"> <img src="assets/images/products/p21.jpg" alt=""> </a> </div>
+                            <!-- /.image -->
+
                           </div>
+                          <!-- /.product-image -->
                         </div>
+                        <!-- /.col -->
                         <div class="col2 col-xs-7">
                           <div class="product-info">
-                            <h4 class="price"><a href="vendor.php">Mohit Electronics</a></h4>
+                            <h3 class="name"><a href="#">Floral Print Buttoned</a></h3>
                             <div class="rating rateit-small"></div>
-                            <div class="product-price"> <span class="price">Near Ghnata ghar,<br> Old colony </span> </div>
+                            <div class="product-price"> <span class="price"> Rs.450.99 </span> </div>
+                            <!-- /.product-price -->
+
                           </div>
                         </div>
+                        <!-- /.col -->
                       </div>
+                      <!-- /.product-micro-row -->
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="products best-product">
-                  <div class="product">
-                    <div class="product-micro">
-                      <div class="row product-micro-row">
-                        <div class="col col-xs-4">
-                          <div class="product-image">
-                            <div class="image"> <a href="vendor.php"> <img src="assets/images/seller.jpg" alt=""> </a> </div>
-                          </div>
-                        </div>
-                        <div class="col2 col-xs-7">
-                          <div class="product-info">
-                            <h4 class="price"><a href="vendor.php">Akashay Electronics</a></h4>
-                            <div class="rating rateit-small"></div>
-                            <div class="product-price"> <span class="price">Near Ghnata ghar,<br> Old colony </span> </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="product">
-                    <div class="product-micro">
-                      <div class="row product-micro-row">
-                        <div class="col col-xs-4">
-                          <div class="product-image">
-                            <div class="image"> <a href="vendor.php"> <img src="assets/images/seller.jpg" alt=""> </a> </div>
-                          </div>
-                        </div>
-                        <div class="col2 col-xs-7">
-                          <div class="product-info">
-                            <h4 class="price"><a href="vendor.php">John Electronics</a></h4>
-                            <div class="rating rateit-small"></div>
-                            <div class="product-price"> <span class="price">Near Ghnata ghar,<br> Old colony </span> </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <!-- /.product-micro -->
+
                   </div>
                 </div>
               </div>
@@ -1344,38 +1323,58 @@ include 'navbar.php'
                   <div class="product">
                     <div class="product-micro">
                       <div class="row product-micro-row">
-                        <div class="col col-xs-4">
+                        <div class="col col-xs-5">
                           <div class="product-image">
-                            <div class="image"> <a href="vendor.php"> <img src="assets/images/seller.jpg" alt=""> </a> </div>
+                            <div class="image"> <a href="#"> <img src="assets/images/products/p22.jpg" alt=""> </a> </div>
+                            <!-- /.image -->
+
                           </div>
+                          <!-- /.product-image -->
                         </div>
+                        <!-- /.col -->
                         <div class="col2 col-xs-7">
                           <div class="product-info">
-                            <h4 class="price"><a href="vendor.php">Rohit Electronics</a></h4>
+                            <h3 class="name"><a href="#">Floral Print Buttoned</a></h3>
                             <div class="rating rateit-small"></div>
-                            <div class="product-price"> <span class="price">Near Ghnata ghar,<br> Old colony </span> </div>
+                            <div class="product-price"> <span class="price"> Rs.450.99 </span> </div>
+                            <!-- /.product-price -->
+
                           </div>
                         </div>
+                        <!-- /.col -->
                       </div>
+                      <!-- /.product-micro-row -->
                     </div>
+                    <!-- /.product-micro -->
+
                   </div>
                   <div class="product">
                     <div class="product-micro">
                       <div class="row product-micro-row">
-                        <div class="col col-xs-4">
+                        <div class="col col-xs-5">
                           <div class="product-image">
-                            <div class="image"> <a href="vendor.php"> <img src="assets/images/seller.jpg" alt=""> </a> </div>
+                            <div class="image"> <a href="#"> <img src="assets/images/products/p23.jpg" alt=""> </a> </div>
+                            <!-- /.image -->
+
                           </div>
+                          <!-- /.product-image -->
                         </div>
+                        <!-- /.col -->
                         <div class="col2 col-xs-7">
                           <div class="product-info">
-                            <h4 class="price"><a href="vendor.php">Rahul Electronics</a></h4>
+                            <h3 class="name"><a href="#">Floral Print Buttoned</a></h3>
                             <div class="rating rateit-small"></div>
-                            <div class="product-price"> <span class="price">Near Ghnata ghar,<br> Old colony </span> </div>
+                            <div class="product-price"> <span class="price"> Rs.450.99 </span> </div>
+                            <!-- /.product-price -->
+
                           </div>
                         </div>
+                        <!-- /.col -->
                       </div>
+                      <!-- /.product-micro-row -->
                     </div>
+                    <!-- /.product-micro -->
+
                   </div>
                 </div>
               </div>
@@ -1384,38 +1383,118 @@ include 'navbar.php'
                   <div class="product">
                     <div class="product-micro">
                       <div class="row product-micro-row">
-                        <div class="col col-xs-4">
+                        <div class="col col-xs-5">
                           <div class="product-image">
-                            <div class="image"> <a href="vendor.php"> <img src="assets/images/seller.jpg" alt=""> </a> </div>
+                            <div class="image"> <a href="#"> <img src="assets/images/products/p24.jpg" alt=""> </a> </div>
+                            <!-- /.image -->
+
                           </div>
+                          <!-- /.product-image -->
                         </div>
+                        <!-- /.col -->
                         <div class="col2 col-xs-7">
                           <div class="product-info">
-                            <h4 class="price"><a href="vendor.php">Amit Electronics</a></h4>
+                            <h3 class="name"><a href="#">Floral Print Buttoned</a></h3>
                             <div class="rating rateit-small"></div>
-                            <div class="product-price"> <span class="price">Near Ghnata ghar,<br> Old colony </span> </div>
+                            <div class="product-price"> <span class="price"> Rs.450.99 </span> </div>
+                            <!-- /.product-price -->
+
                           </div>
                         </div>
+                        <!-- /.col -->
                       </div>
+                      <!-- /.product-micro-row -->
                     </div>
+                    <!-- /.product-micro -->
+
                   </div>
                   <div class="product">
                     <div class="product-micro">
                       <div class="row product-micro-row">
-                        <div class="col col-xs-4">
+                        <div class="col col-xs-5">
                           <div class="product-image">
-                            <div class="image"> <a href="vendor.php"> <img src="assets/images/seller.jpg" alt=""> </a> </div>
+                            <div class="image"> <a href="#"> <img src="assets/images/products/p25.jpg" alt=""> </a> </div>
+                            <!-- /.image -->
+
                           </div>
+                          <!-- /.product-image -->
                         </div>
+                        <!-- /.col -->
                         <div class="col2 col-xs-7">
                           <div class="product-info">
-                            <h4 class="price"><a href="vendor.php">Akhil Electronics</a></h4>
+                            <h3 class="name"><a href="#">Floral Print Buttoned</a></h3>
                             <div class="rating rateit-small"></div>
-                            <div class="product-price"> <span class="price">Near Ghnata ghar,<br> Old colony </span> </div>
+                            <div class="product-price"> <span class="price"> Rs.450.99 </span> </div>
+                            <!-- /.product-price -->
+
                           </div>
                         </div>
+                        <!-- /.col -->
                       </div>
+                      <!-- /.product-micro-row -->
                     </div>
+                    <!-- /.product-micro -->
+
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="products best-product">
+                  <div class="product">
+                    <div class="product-micro">
+                      <div class="row product-micro-row">
+                        <div class="col col-xs-5">
+                          <div class="product-image">
+                            <div class="image"> <a href="#"> <img src="assets/images/products/p26.jpg" alt=""> </a> </div>
+                            <!-- /.image -->
+
+                          </div>
+                          <!-- /.product-image -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col2 col-xs-7">
+                          <div class="product-info">
+                            <h3 class="name"><a href="#">Floral Print Buttoned</a></h3>
+                            <div class="rating rateit-small"></div>
+                            <div class="product-price"> <span class="price"> Rs.450.99 </span> </div>
+                            <!-- /.product-price -->
+
+                          </div>
+                        </div>
+                        <!-- /.col -->
+                      </div>
+                      <!-- /.product-micro-row -->
+                    </div>
+                    <!-- /.product-micro -->
+
+                  </div>
+                  <div class="product">
+                    <div class="product-micro">
+                      <div class="row product-micro-row">
+                        <div class="col col-xs-5">
+                          <div class="product-image">
+                            <div class="image"> <a href="#"> <img src="assets/images/products/p27.jpg" alt=""> </a> </div>
+                            <!-- /.image -->
+
+                          </div>
+                          <!-- /.product-image -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col2 col-xs-7">
+                          <div class="product-info">
+                            <h3 class="name"><a href="#">Floral Print Buttoned</a></h3>
+                            <div class="rating rateit-small"></div>
+                            <div class="product-price"> <span class="price"> Rs.450.99 </span> </div>
+                            <!-- /.product-price -->
+
+                          </div>
+                        </div>
+                        <!-- /.col -->
+                      </div>
+                      <!-- /.product-micro-row -->
+                    </div>
+                    <!-- /.product-micro -->
+
                   </div>
                 </div>
               </div>
@@ -1428,7 +1507,7 @@ include 'navbar.php'
 
         <!-- ============================================== FEATURED PRODUCTS ============================================== -->
         <section class="section wow fadeInUp new-arriavls">
-          <h3 class="section-title">Popular Products</h3>
+          <h3 class="section-title">New Arrivals</h3>
           <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
             <div class="item item-carousel">
               <div class="products">
@@ -1452,7 +1531,7 @@ include 'navbar.php'
                   <!-- /.product-info -->
                   <div class="cart clearfix animate-effect">
                     <div class="action">
-
+                        
                     </div>
                     <!-- /.action -->
                   </div>
@@ -1487,7 +1566,7 @@ include 'navbar.php'
                   <!-- /.product-info -->
                   <div class="cart clearfix animate-effect">
                     <div class="action">
-
+                      
                     </div>
                     <!-- /.action -->
                   </div>
@@ -1522,7 +1601,7 @@ include 'navbar.php'
                   <!-- /.product-info -->
                   <div class="cart clearfix animate-effect">
                     <div class="action">
-
+                      
                     </div>
                     <!-- /.action -->
                   </div>
@@ -1557,7 +1636,7 @@ include 'navbar.php'
                   <!-- /.product-info -->
                   <div class="cart clearfix animate-effect">
                     <div class="action">
-
+                      
                     </div>
                     <!-- /.action -->
                   </div>
@@ -1592,7 +1671,7 @@ include 'navbar.php'
                   <!-- /.product-info -->
                   <div class="cart clearfix animate-effect">
                     <div class="action">
-
+                      
                     </div>
                     <!-- /.action -->
                   </div>
@@ -1627,7 +1706,7 @@ include 'navbar.php'
                   <!-- /.product-info -->
                   <div class="cart clearfix animate-effect">
                     <div class="action">
-
+                      
                     </div>
                     <!-- /.action -->
                   </div>

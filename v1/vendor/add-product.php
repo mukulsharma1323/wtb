@@ -22,7 +22,7 @@
 
   <body>
 
-    <?php 
+    <?php
       include'sidebar.php';
       include'top-navbar.php';
        ?>
@@ -37,20 +37,20 @@
         </div>
       </div>
 
-<form action="add_product_db.php" method="POST" >  
+<form action="add_product_db.php" method="POST" >
       <div class="br-pagebody">
         <div class="br-section-wrapper">
-          <?php 
-            if (isset($_GET["status"])) 
-              echo "Product Added Successfully"; 
-              echo "<br>"; 
+          <?php
+            if (isset($_GET["status"]))
+              echo "Product Added Successfully";
+              echo "<br>";
             ?>
 
           <h6 class="br-section-label">Add Product</h6>
 
         <div class="form-layout form-layout-1">
             <div class="row mg-b-25">
-              
+
               <div class="col-lg-12">
                 <div class="form-group">
                   <label for="brandName">Enter Brand Name*</label>
@@ -145,7 +145,7 @@
 
 </form>
 
-      <?php 
+      <?php
       include'footer.php';
        ?>
 

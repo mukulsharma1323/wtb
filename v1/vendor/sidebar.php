@@ -10,7 +10,7 @@
           </a>
         </li>
         <li class="br-menu-item">
-          <a href="add-product.php" class="br-menu-link active">
+          <a href="add-product.php" class="br-menu-link">
             <!-- <i class="menu-item-icon icon ion-ios-home-outline tx-24"></i> -->
             <span class="menu-item-label">Add Products</span>
           </a>
@@ -28,7 +28,7 @@
           </a>
         </li>
       </ul><!-- br-sideleft-menu -->
-      
+
       <br>
     </div><!-- br-sideleft -->
     <!-- ########## END: LEFT PANEL ########## -->

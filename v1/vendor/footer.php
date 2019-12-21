@@ -1,7 +1,7 @@
 
       <footer class="br-footer">
         <div class="footer-left">
-          <div>made by Mukul.</div>
+          <div>Design and Developed By: Where Is To Buy &copy; Copyright 2020, All Rights Reserved</div>
         </div>
       </footer>
     </div><!-- br-mainpanel -->
