@@ -11,7 +11,8 @@ include('db_config.php');
 // receive values from HTML FORM as POST method 
 if(isset($_POST['productname']))
 {
-
+	session_start();
+	$id=$_SESSION['id'];
  $brandname = $_POST["brandname"]; 
  $category = $_POST["category"]; 
  $subCategory = $_POST["subCategory"]; 
@@ -25,25 +26,21 @@ if(isset($_POST['productname']))
 
 //create directory for uploading files if directory does not exist
 
-// if (!is_dir("uploads/images/")) {
-//     mkdir("uploads/images/", 0777, true);
-// }
+if (!is_dir("uploads/images/")) {
+    mkdir("uploads/images/", 0777, true);
+}
 
-// if(isset($_FILES['licencefile'])){
-//       $errors= array();
-//       $file_name = $_FILES['licencefile']['name'];
-//       $file_size =$_FILES['licencefile']['size'];
-//       $file_tmp =$_FILES['licencefile']['tmp_name'];
-//       $file_type=$_FILES['licencefile']['type'];
-//       $file_name = str_replace(' ', '_', $file_name);
-
-//       if(empty($errors)==true){
-//          move_uploaded_file($file_tmp,"uploads/images/".$file_name);
-//          echo "Success";
-//       }else{
-//          print_r($errors);
-//       }
-//    }
+if(isset($_FILES['productimage'])){
+      $errors= array();
+      $file_name = $_FILES['productimage']['name'];
+      $file_size =$_FILES['productimage']['size'];
+      $file_tmp =$_FILES['productimage']['tmp_name'];
+      $file_type=$_FILES['productimage']['type'];
+      echo $file_name;
+      move_uploaded_file($file_tmp,"uploads/images/".$file_name);
+         
+      
+   }
 
 $query="INSERT INTO products 
 	(vendor_id,
@@ -64,14 +61,14 @@ $query="INSERT INTO products
 	x_link, 
 	y_link)
 Values
-	('12',
+	('$id',
 	'$brandname', 
 	'$category', 
 	'$subCategory', 
 	'$productname', 
 	'$productcode', 
 	'$productdescription', 
-	'http://google.com', 
+	'$file_name', 
 	'$productquantity', 
 	'$mrp', 
 	'$sellingprice', 

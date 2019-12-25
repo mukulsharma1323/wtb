@@ -37,7 +37,7 @@
         </div>
       </div>
 
-<form action="add_product_db.php" method="POST" >
+<form action="add_product_db.php" method="POST" enctype="multipart/form-data">
       <div class="br-pagebody">
         <div class="br-section-wrapper">
           <?php

@@ -1,4 +1,11 @@
     <!-- ########## START: HEAD PANEL ########## -->
+    <?php
+      include 'db_config.php';
+      session_start();
+      $id = $_SESSION['id'];
+      $result = mysqli_query($connection, "Select * FROM vendors WHERE id=$id");
+      $r = mysqli_fetch_array($result);
+     ?>
     <div class="br-header">
       <div class="br-header-left">
         <div class="navicon-left hidden-md-down"><a id="btnLeftMenu" href=""><i class="icon ion-navicon-round"></i></a></div>
@@ -15,11 +22,11 @@
             <div class="dropdown-menu dropdown-menu-header wd-250">
               <div class="tx-center">
                 <a href=""><img src="../img/blank-profile.png" class="wd-80 rounded-circle" alt=""></a>
-                <h6 class="logged-fullname">John Doe</h6>
+                <h6 class="logged-fullname"><?php echo $r['firstname']; ?></h6>
               </div>
               <hr>
               <ul class="list-unstyled user-profile-nav">
-                <li><a href="profile.php"><i class="icon ion-ios-person"></i> Edit Profile</a></li>
+                <li><a href="profile.php?id=<?php echo $r['id']; ?>"><i class="icon ion-ios-person"></i> Edit Profile</a></li>
                 <!-- <li><a href=""><i class="icon ion-ios-gear"></i> Settings</a></li> -->
                 <!-- <li><a href=""><i class="icon ion-ios-download"></i> Downloads</a></li> -->
                 <!-- <li><a href=""><i class="icon ion-ios-star"></i> Favorites</a></li> -->

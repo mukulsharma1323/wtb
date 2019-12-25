@@ -1,5 +1,5 @@
 <?php
 session_start();
-unset($_SESSION['Email']);
+unset($_SESSION['id']);
 header("location: signin.php");
 ?>

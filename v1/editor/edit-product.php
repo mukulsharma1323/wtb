@@ -40,6 +40,9 @@
 			$productquantity = $_POST["productquantity"]; 
 			$mrp = $_POST["mrp"]; 
 			$sellingprice = $_POST["sellingprice"]; 
+      $flipkart = $_POST["flipkart"];
+      $snapdeal = $_POST["snapdeal"];
+      $amazon = $_POST["amazon"];
 			$hsncode = $_POST["hsncode"]; 
 
 			mysqli_query($connection, "UPDATE products SET brand_name='$brandname',
@@ -51,7 +54,10 @@
 									quantity='$productquantity',
 									MRP='$mrp',
 									selling_price='$sellingprice',
-									HSN_code='$hsncode' WHERE id=$id");
+									HSN_code='$hsncode',
+                  fk_link='$flipkart',
+                  sd_link='$snapdeal',
+                  az_link='$amazon' WHERE id=$id");
 			
 			header('location:view-product.php');
 			
@@ -160,6 +166,24 @@
                 <div class="form-group">
                   <label for="sellingPrice">Enter Selling/Discounted Price*</label>
                   <input type="text" name="sellingprice" parsley-trigger="change"  class="form-control" id="sPrice"value="<?php echo $sprice;?>">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="sellingPrice">Flipkart Link*</label>
+                  <input type="text" name="flipkart" parsley-trigger="change"  class="form-control" id="sPrice">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="sellingPrice">Snap Deal Link*</label>
+                  <input type="text" name="snapdeal" parsley-trigger="change"  class="form-control" id="sPrice">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="sellingPrice">Amazon Link*</label>
+                  <input type="text" name="amazon" parsley-trigger="change"  class="form-control" id="sPrice">
                 </div>
               </div>
                <div class="col-lg-12">

@@ -47,7 +47,8 @@
        <?php
        	if(isset($_POST['update']))
        	{
-       		$id = 1;
+          
+       		$id = $_GET['id'];
        		$fname = $_POST["firstname"];
 			$lname = $_POST["lastname"];
 			$mobile = $_POST["mobile"];
@@ -109,7 +110,7 @@
       </div>
       <?php
 
-                $id=1;
+                $id=$_GET['id'];
                 $result = mysqli_query($connection, "Select * FROM vendors WHERE id=$id");
                 $r = mysqli_fetch_array($result);
                 $fname = $r['firstname'];
@@ -124,7 +125,7 @@
                 $status = $r['status'];
 
               ?>
-<form action="profile.php" method="POST">
+<form action="profile.php?id=<?php echo $id; ?>" method="POST">
 	<div class="tab-content br-profile-body">
         <div class="tab-pane fade active show" id="posts">
           <div class="row">

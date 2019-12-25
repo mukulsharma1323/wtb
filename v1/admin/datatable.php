@@ -45,9 +45,32 @@
 
 </head>
 <body class="content-fuid">
-  
+  <?php 
+
+          if(isset($_GET['eid'])) 
+          {
+            $id=$_GET['eid'];
+            mysqli_query($connection, "UPDATE vendors SET status='Enable' WHERE id=$id");
+            header('location: maintain-shop.php');
+
+          }
+          if(isset($_GET['did'])) 
+          {
+            $id=$_GET['did'];
+            mysqli_query($connection, "UPDATE vendors SET status='Disable' WHERE id=$id");
+            header('location: maintain-shop.php');
+
+          }
+
+       ?>
  <div class="br-mainpanel">
-      
+      <div class="br-pagetitle">
+        <!-- <i class="icon ion-ios-home-outline"></i> -->
+        <div>
+          <!-- <h4>Dashboard</h4> -->
+          <!-- <p class="mg-b-0">Do bigger things with Bracket plus, the responsive bootstrap 4 admin template.</p> -->
+        </div>
+      </div>
 <div class="">
     <br>
     <!-- Main content -->
@@ -61,18 +84,17 @@
             
               <div class="br-pagebody">
       <!-- form-layout --><div class="br-section-wrapper">
-      <h6 class="br-section-label">Login Details</h6>
+      <h6 class="br-section-label">Enable/Disable Products</h6>
       <div class="bd bd-gray-300 rounded table-responsive">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>ID</th>
-                  <th>Vendor Name</th>
                   <th>Shop Name</th>
-                  <th>IP Address</th>
-                  <th>Registration Time</th>
+                  <th>Vendor Name</th>
+                  <th>Current Status</th>
+                  <th>Enable/Disable Shop</th>
                   
-               
+                  <th></th> 
                 </tr>
                 </thead>
                 <tbody>
@@ -82,11 +104,10 @@
                             
                                echo '  
                                <tr>  
-                                    <td>'.$row['id'].'</td>  
+                                    <td>'.$row['shop_name'].'</td>  
                                     <td>'.$row['firstname'].'</td>  
-                                    <td>'.$row['shop_name'].'</td> 
-                                    <td>'.$_SERVER['REMOTE_ADDR'].' </td> 
-                                    <td>'.$row['reg_date'].' </td>
+                                    <td>'.$row['status'].'</td>  
+                                    <td> <span><a href="maintain-shop.php?eid='.$row['id'].'" class="btn btn-success btn-icon mg-r-5 mg-b-10"><div style="height:20px">Enable</div></a><a href="maintain-shop.php?did='.$row['id'].'" class="btn btn-danger btn-icon mg-r-5 mg-b-10"><div style="height:20px">Disable</div></a></span> </td>
 
                                </tr>  
                                ';  
@@ -135,7 +156,7 @@
   $(function () {
     $("#example1").DataTable({
       dom: 'Bfrtip',
-      buttons: []
+      
     });
   });
 </script>

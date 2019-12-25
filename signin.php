@@ -48,6 +48,7 @@ include 'db_config.php';
 					  $row= mysqli_fetch_array($res);
 					  if($row['email'] == $Email && $row['password'] == $Pass)
 					  {
+					  	
 						header("location: index.php");
 					  }
 					  else

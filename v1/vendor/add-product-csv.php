@@ -1,5 +1,10 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "witb");
+
+     include 'sidebar.php';
+include 'top-navbar.php';
+include 'db_config.php';
+
+$id=$_SESSION['id'];
 
 
 if (isset($_POST["import"])) {
@@ -12,8 +17,8 @@ if (isset($_POST["import"])) {
 
         while (($column = fgetcsv($file, 10000, ",")) !== FALSE) {
             $sqlInsert = "INSERT into products (vendor_id,brand_name,category,sub_category,product_name,product_code,description, image_url,quantity, MRP,selling_price, HSN_code)
-                   values ('" . $column[0] . "','" . $column[1] . "','" . $column[2] . "','" . $column[3] . "','" . $column[4] . "','" . $column[5] . "','" . $column[6] . "','" . $column[7] . "','" . $column[8] . "','" . $column[9] . "','" . $column[10] . "','" . $column[11] . "')";
-            $result = mysqli_query($conn, $sqlInsert);
+                   values ('$id','" . $column[1] . "','" . $column[2] . "','" . $column[3] . "','" . $column[4] . "','" . $column[5] . "','" . $column[6] . "','" . $column[7] . "','" . $column[8] . "','" . $column[9] . "','" . $column[10] . "','" . $column[11] . "')";
+            $result = mysqli_query($connection, $sqlInsert);
 
             if (! empty($result)) {
                 $type = "success";
@@ -79,10 +84,7 @@ $(document).ready(function() {
 
   <body>
 
-    <?php
-      include 'sidebar.php';
-      include'top-navbar.php';
-       ?>
+    
 
     <!-- ########## START: MAIN PANEL ########## -->
     <div class="br-mainpanel">
