@@ -42,7 +42,7 @@
           <!-- /.contact-row --> 
           <!-- ============================================================= SEARCH AREA ============================================================= -->
           <div class="search-area">
-            <form>
+            <form id="product-search-form" method="GET" action="search.php">
               <div class="control-group">
                 <ul class="categories-filter animate-dropdown">
                   <li class="dropdown"> <a class="dropdown-toggle"  data-toggle="dropdown" href="category.html">Categories <b class="caret"></b></a>
@@ -56,7 +56,7 @@
                   </li>
                 </ul>
                 <input class="search-field" placeholder="Search here..." />
-                <a class="search-button" href="#" ></a> </div>
+                <a class="search-button" href="javascript:$('#product-search-form').submit();" ></a> </div>
             </form>
           </div>
           <!-- /.search-area --> 
