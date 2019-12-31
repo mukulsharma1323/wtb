@@ -1,3 +1,15 @@
+<?php
+    include 'db_config.php';
+    $id=$_GET['id'];
+    $result=mysqli_query($connection,"select * from vendors where id=$id");
+    $r = mysqli_fetch_array($result);
+    $vname=$r['firstname']." ".$r['lastname'];
+    $Email=$r['email'];
+    $mobile=$r['mobile'];
+    $address=$r['address'];
+    $sname=$r['shop_name'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -65,7 +77,7 @@
 
 	<!-- panel-heading -->
 		<div class="panel-heading">
-	          <span  ><h2 style="padding:10px;text-align:center">Kumar Electronics</h2></span>
+	          <span  ><h2 style="padding:10px;text-align:center"><?php echo $sname; ?></h2></span>
     </div>
     <!-- panel-heading -->
 
@@ -79,15 +91,15 @@
 				<div class="col-md-6 col-sm-6 guest-login">
 					<div class="form-group">
 						<label class="info-title" for="exampleInputEmail1" style="font-size:20px" >Name </label><br>
-						<label class="info-title" style="font-size:15px;text-decoration: underline;color:red">Pankaj Kumar </label>
+						<label class="info-title" style="font-size:15px;text-decoration: underline;color:red"><?php echo $vname; ?> </label>
 					</div>
 					<div class="form-group">
 						<label class="info-title" for="exampleInputEmail1" style="font-size:20px" >Phone </label><br>
-						<label class="info-title" style="font-size:15px;text-decoration: underline;color:red">John Doe </label>
+						<label class="info-title" style="font-size:15px;text-decoration: underline;color:red"><?php echo $mobile; ?> </label>
 					</div>
 					<div class="form-group">
 						<label class="info-title" for="exampleInputEmail1" style="font-size:20px" >Address </label><br>
-						<label class="info-title" style="font-size:15px;text-decoration: underline;color:red">Keshav Nagar, Hapur Road</label>
+						<label class="info-title" style="font-size:15px;text-decoration: underline;color:red"><?php echo $address; ?></label>
 					</div>
 				</div>
 				<!-- guest-login -->
@@ -96,7 +108,7 @@
 				<div class="col-md-6 col-sm-6 already-registered-login">
 					<div class="form-group">
 						<label class="info-title" for="exampleInputEmail1" style="font-size:20px" >Email Address </label><br>
-						<label class="info-title" style="font-size:15px;text-decoration: underline;color:red">seller@mail.com </label>
+						<label class="info-title" style="font-size:15px;text-decoration: underline;color:red"><?php echo $Email; ?> </label>
 					</div>
 						<div class="form-group">
 					    <label class="info-title" for="exampleInputEmail1" style="font-size:20px" >Working Hour </label><br>

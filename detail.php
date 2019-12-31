@@ -44,7 +44,18 @@
     <body class="cnt-home">
 		<!-- ============================================== HEADER ============================================== -->
 <?php
-include 'navbar.php'
+include 'navbar.php';
+include 'db_config.php';
+
+$id=$_GET['id'];
+$result=mysqli_query($connection,"select * from products where id=$id");
+    $r = mysqli_fetch_array($result);
+    $pname=$r['product_name'];
+    $descri=$r['description'];
+    $sell=$r['selling_price'];
+    $mrp=$r['MRP'];
+    $image="/v1/vendor/uploads/images/".$r['image_url'];
+
 ?>
 <!-- ============================================== HEADER : END ============================================== -->
 <div class="breadcrumb">
@@ -53,7 +64,7 @@ include 'navbar.php'
 			<ul class="list-inline list-unstyled">
 				<li><a href="#">Home</a></li>
 				<li><a href="#">Clothing</a></li>
-				<li class='active'>Floral Print Buttoned</li>
+				<li class='active'><?php echo $pname; ?></li>
 			</ul>
 		</div><!-- /.breadcrumb-inner -->
 	</div><!-- /.container -->
@@ -71,7 +82,7 @@ include 'navbar.php'
         <div id="owl-single-product">
             <div class="single-product-gallery-item" id="slide1">
                 <a data-lightbox="image-1" data-title="Gallery" href="assets/images/products/p2.jpg">
-                    <img class="img-responsive" alt=""  src="assets/images/blank.gif" data-echo="assets/images/products/p2.jpg" />
+                    <img class="img-responsive" alt=""  src="<?php echo $image; ?>"  />
                 </a>
             </div><!-- /.single-product-gallery-item -->
         </div><!-- /.single-product-slider -->
@@ -79,7 +90,7 @@ include 'navbar.php'
 </div><!-- /.gallery-holder -->
 					<div class='col-sm-6 col-md-7 product-info-block'>
 						<div class="product-info">
-							<h1 class="name">Floral Print Buttoned</h1>
+							<h1 class="name"><?php echo $pname; ?></h1>
 
 							<div class="rating-reviews m-t-20">
 								<div class="row">
@@ -110,7 +121,7 @@ include 'navbar.php'
 							</div><!-- /.stock-container -->
 
 							<div class="description-container m-t-20">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								<?php echo $descri ?>
 							</div><!-- /.description-container -->
 
 							<div class="price-container info-container m-t-20">
@@ -119,8 +130,8 @@ include 'navbar.php'
 
 									<div class="col-sm-6">
 										<div class="price-box">
-											<span class="price">Rs.800.00</span>
-											<span class="price-strike">Rs.900.00</span>
+											<span class="price">Rs. <?php echo $sell ?></span>
+											<span class="price-strike">Rs. <?php echo $mrp; ?></span>
 										</div>
 									</div>
 

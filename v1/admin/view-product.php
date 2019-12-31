@@ -7,7 +7,8 @@
  
  $query ="SELECT * FROM products ORDER BY ID DESC";  
  $result = mysqli_query($connection, $query);  
- ?><!DOCTYPE html>
+ ?>
+ <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">

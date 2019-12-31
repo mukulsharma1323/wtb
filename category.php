@@ -37,7 +37,10 @@
 <!-- ============================================== HEADER ============================================== -->
 
 <?php
-include 'navbar.php'
+include 'navbar.php';
+include 'db_config.php';
+
+$result=mysqli_query($connection,"select * from products");
 ?>
 
 <!-- ============================================== HEADER : END ============================================== -->
@@ -125,11 +128,16 @@ include 'navbar.php'
             <div class="tab-pane active " id="grid-container">
               <div class="category-product">
                 <div class="row">
-                  <div class="col-sm-6 col-md-4 wow fadeInUp">
+                  <?php 
+                  
+                        while($row = mysqli_fetch_array($result))  
+                        {
+                            $image="/v1/vendor/uploads/images/".$row['image_url'];
+                          echo  '<div class="col-sm-6 col-md-4 wow fadeInUp">
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p5.jpg" alt="" height="350" width="350"></a> </div>
+                          <div class="image"> <a href="detail.php"><img  src=$image alt="" height="350" width="350"></a> </div>
                           <!-- /.image -->
 
                           <div class="tag new"><span>new</span></div>
@@ -137,7 +145,7 @@ include 'navbar.php'
                         <!-- /.product-image -->
 
                         <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
+                          <h3 class="name"><a href="detail.php?id='.$row['id'].'">'.$row['product_name'].'</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
                           <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
@@ -152,362 +160,9 @@ include 'navbar.php'
 
                     </div>
                     <!-- /.products -->
-                  </div>
-                  <!-- /.item -->
-
-                  <div class="col-sm-6 col-md-4 wow fadeInUp">
-                    <div class="products">
-                      <div class="product">
-                        <div class="product-image">
-                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p1.jpg" alt="" height="350" width="350" ></a> </div>
-                          <!-- /.image -->
-
-                          <div class="tag sale"><span>sale</span></div>
-                        </div>
-                        <!-- /.product-image -->
-
-                        <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
-                          <div class="rating rateit-small"></div>
-                          <div class="description"></div>
-                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                          <!-- /.product-price -->
-
-                        </div>
-                        <!-- /.product-info -->
-                        <!-- /.cart -->
-                      </div>
-                      <!-- /.product -->
-
-                    </div>
-                    <!-- /.products -->
-                  </div>
-                  <!-- /.item -->
-                  <div class="col-sm-6 col-md-4 wow fadeInUp">
-                    <div class="products">
-                      <div class="product">
-                        <div class="product-image">
-                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p1.jpg" alt="" height="350" width="350" ></a> </div>
-                          <!-- /.image -->
-
-                          <div class="tag sale"><span>sale</span></div>
-                        </div>
-                        <!-- /.product-image -->
-
-                        <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
-                          <div class="rating rateit-small"></div>
-                          <div class="description"></div>
-                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                          <!-- /.product-price -->
-
-                        </div>
-                        <!-- /.product-info -->
-                        <!-- /.cart -->
-                      </div>
-                      <!-- /.product -->
-
-                    </div>
-                    <!-- /.products -->
-                  </div>
-                  <!-- /.item -->
-
-                  <div class="col-sm-6 col-md-4 wow fadeInUp">
-                    <div class="products">
-                      <div class="product">
-                        <div class="product-image">
-                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p6.jpg" alt="" height="350" width="350"></a> </div>
-                          <!-- /.image -->
-
-                          <div class="tag hot"><span>hot</span></div>
-                        </div>
-                        <!-- /.product-image -->
-
-                        <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
-                          <div class="rating rateit-small"></div>
-                          <div class="description"></div>
-                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                          <!-- /.product-price -->
-
-                        </div>
-                        <!-- /.product-info -->
-                        <!-- /.cart -->
-                      </div>
-                      <!-- /.product -->
-
-                    </div>
-                    <!-- /.products -->
-                  </div>
-                  <!-- /.item -->
-
-                  <div class="col-sm-6 col-md-4 wow fadeInUp">
-                    <div class="products">
-                      <div class="product">
-                        <div class="product-image">
-                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p6.jpg" alt="" height="350" width="350"></a> </div>
-                          <!-- /.image -->
-
-                          <div class="tag hot"><span>hot</span></div>
-                        </div>
-                        <!-- /.product-image -->
-
-                        <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
-                          <div class="rating rateit-small"></div>
-                          <div class="description"></div>
-                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                          <!-- /.product-price -->
-
-                        </div>
-                        <!-- /.product-info -->
-                        <!-- /.cart -->
-                      </div>
-                      <!-- /.product -->
-
-                    </div>
-                    <!-- /.products -->
-                  </div>
-                  <!-- /.item -->
-
-                  <div class="col-sm-6 col-md-4 wow fadeInUp">
-                    <div class="products">
-                      <div class="product">
-                        <div class="product-image">
-                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p7.jpg" alt="" height="350" width="350"></a> </div>
-                          <!-- /.image -->
-
-                          <div class="tag sale"><span>sale</span></div>
-                        </div>
-                        <!-- /.product-image -->
-
-                        <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
-                          <div class="rating rateit-small"></div>
-                          <div class="description"></div>
-                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                          <!-- /.product-price -->
-
-                        </div>
-                        <!-- /.product-info -->
-                        <!-- /.cart -->
-                      </div>
-                      <!-- /.product -->
-
-                    </div>
-                    <!-- /.products -->
-                  </div>
-                  <!-- /.item -->
-
-                  <div class="col-sm-6 col-md-4 wow fadeInUp">
-                    <div class="products">
-                      <div class="product">
-                        <div class="product-image">
-                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p8.jpg" alt="" height="350" width="350"></a> </div>
-                          <!-- /.image -->
-
-                          <div class="tag new"><span>new</span></div>
-                        </div>
-                        <!-- /.product-image -->
-
-                        <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
-                          <div class="rating rateit-small"></div>
-                          <div class="description"></div>
-                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                          <!-- /.product-price -->
-
-                        </div>
-                        <!-- /.product-info -->
-
-                        <!-- /.cart -->
-                      </div>
-                      <!-- /.product -->
-
-                    </div>
-                    <!-- /.products -->
-                  </div>
-                  <!-- /.item -->
-
-                  <div class="col-sm-6 col-md-4 wow fadeInUp">
-                    <div class="products">
-                      <div class="product">
-                        <div class="product-image">
-                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p9.jpg" alt="" height="350" width="350"></a> </div>
-                          <!-- /.image -->
-
-                          <div class="tag new"><span>new</span></div>
-                        </div>
-                        <!-- /.product-image -->
-
-                        <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
-                          <div class="rating rateit-small"></div>
-                          <div class="description"></div>
-                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                          <!-- /.product-price -->
-
-                        </div>
-                        <!-- /.product-info -->
-
-                        <!-- /.cart -->
-                      </div>
-                      <!-- /.product -->
-
-                    </div>
-                    <!-- /.products -->
-                  </div>
-                  <!-- /.item -->
-
-                  <div class="col-sm-6 col-md-4 wow fadeInUp">
-                    <div class="products">
-                      <div class="product">
-                        <div class="product-image">
-                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p10.jpg" alt="" height="350" width="350"></a> </div>
-                          <!-- /.image -->
-
-                          <div class="tag sale"><span>sale</span></div>
-                        </div>
-                        <!-- /.product-image -->
-
-                        <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
-                          <div class="rating rateit-small"></div>
-                          <div class="description"></div>
-                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                          <!-- /.product-price -->
-
-                        </div>
-                        <!-- /.product-info -->
-
-                        <!-- /.cart -->
-                      </div>
-                      <!-- /.product -->
-
-                    </div>
-                    <!-- /.products -->
-                  </div>
-                  <!-- /.item -->
-
-                  <div class="col-sm-6 col-md-4 wow fadeInUp">
-                    <div class="products">
-                      <div class="product">
-                        <div class="product-image">
-                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p2.jpg" alt="" height="350" width="350"></a> </div>
-                          <!-- /.image -->
-
-                          <div class="tag hot"><span>hot</span></div>
-                        </div>
-                        <!-- /.product-image -->
-
-                        <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
-                          <div class="rating rateit-small"></div>
-                          <div class="description"></div>
-                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                          <!-- /.product-price -->
-
-                        </div>
-                        <!-- /.product-info -->
-
-                        <!-- /.cart -->
-                      </div>
-                      <!-- /.product -->
-
-                    </div>
-                    <!-- /.products -->
-                  </div>
-                  <!-- /.item -->
-
-                  <div class="col-sm-6 col-md-4 wow fadeInUp">
-                    <div class="products">
-                      <div class="product">
-                        <div class="product-image">
-                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p11.jpg" alt="" height="350" width="350"></a> </div>
-                          <!-- /.image -->
-
-                          <div class="tag new"><span>new</span></div>
-                        </div>
-                        <!-- /.product-image -->
-
-                        <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
-                          <div class="rating rateit-small"></div>
-                          <div class="description"></div>
-                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                          <!-- /.product-price -->
-
-                        </div>
-                        <!-- /.product-info -->
-
-                        <!-- /.cart -->
-                      </div>
-                      <!-- /.product -->
-
-                    </div>
-                    <!-- /.products -->
-                  </div>
-                  <!-- /.item -->
-
-                  <div class="col-sm-6 col-md-4 wow fadeInUp">
-                    <div class="products">
-                      <div class="product">
-                        <div class="product-image">
-                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p12.jpg" alt="" height="350" width="350"></a> </div>
-                          <!-- /.image -->
-
-                          <div class="tag sale"><span>sale</span></div>
-                        </div>
-                        <!-- /.product-image -->
-
-                        <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
-                          <div class="rating rateit-small"></div>
-                          <div class="description"></div>
-                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                          <!-- /.product-price -->
-
-                        </div>
-                        <!-- /.product-info -->
-
-                        <!-- /.cart -->
-                      </div>
-                      <!-- /.product -->
-
-                    </div>
-                    <!-- /.products -->
-                  </div>
-                  <!-- /.item -->
-
-                  <div class="col-sm-6 col-md-4 wow fadeInUp">
-                    <div class="products">
-                      <div class="product">
-                        <div class="product-image">
-                          <div class="image"> <a href="detail.php"><img  src="assets/images/products/p14.jpg" alt=""></a> </div>
-                          <!-- /.image -->
-
-                          <div class="tag hot"><span>hot</span></div>
-                        </div>
-                        <!-- /.product-image -->
-
-                        <div class="product-info text-left">
-                          <h3 class="name"><a href="detail.php">Floral Print Buttoned</a></h3>
-                          <div class="rating rateit-small"></div>
-                          <div class="description"></div>
-                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
-                          <!-- /.product-price -->
-
-                        </div>
-                        <!-- /.product-info -->
-
-                        <!-- /.cart -->
-                      </div>
-                      <!-- /.product -->
-
-                    </div>
-                    <!-- /.products -->
-                  </div>
-                  <!-- /.item -->
+                  </div>';
+                        }
+                  ?>
                 </div>
                 <!-- /.row -->
               </div>

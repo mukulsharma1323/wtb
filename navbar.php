@@ -87,8 +87,8 @@
           <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
             <div class="nav-outer">
               <ul class="nav navbar-nav">
-                <li class="active dropdown yamm-fw"> <a href="home.html" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Home</a> </li>
-                
+                <li class="active dropdown yamm-fw"> <a href="index.php">Home</a> </li>
+                <li class="active dropdown yamm-fw"> <a href="vendors.php">Sellers</a> </li>
                 <li class="dropdown  navbar-right special-menu"> <a href="#">Todays offer</a> </li>
               </ul>
               <!-- /.navbar-nav -->
