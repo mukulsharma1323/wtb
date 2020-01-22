@@ -43,7 +43,7 @@
           <!-- ============================================================= SEARCH AREA ============================================================= -->
           <div class="search-area">
             <form id="product-search-form" method="GET" action="search.php">
-              <div class="control-group">
+              <div class="control-group search-field-div">
                 <ul class="categories-filter animate-dropdown">
                   <li class="dropdown"> <a class="dropdown-toggle"  data-toggle="dropdown" href="category.html">Categories <b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu" >
@@ -55,8 +55,10 @@
                     </ul>
                   </li>
                 </ul>
-                <input class="search-field" placeholder="Search here..." />
-                <a class="search-button" href="javascript:$('#product-search-form').submit();" ></a> </div>
+                <input type="text" autocomplete="off" class="search-field" id="search-box" name="product_query" placeholder="Search here..."/>
+                <a class="search-button" href="javascript:$('#product-search-form').submit();" ></a> 
+                <div class="results-live" id="result-live"></div>
+              </div>
             </form>
           </div>
           <!-- /.search-area --> 
@@ -86,10 +88,8 @@
           <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
             <div class="nav-outer">
               <ul class="nav navbar-nav">
-<<<<<<< HEAD
                 <li class="active dropdown yamm-fw"> <a href="index.php">Home</a> </li>
                 <li class="active dropdown yamm-fw"> <a href="vendors.php">Sellers</a> </li>
-=======
                 <li class="active dropdown yamm-fw"> <a href="home.html" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Home</a> </li>
                 <li class="dropdown mega-menu"> 
                 <a href="category.html"  data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Electronics <span class="menu-label hot-menu hidden-xs">new</span> </a>
@@ -169,8 +169,7 @@
                       <!-- /.yamm-content --> </li>
                   </ul>
                 </li>
-                
->>>>>>> 7899f9ffcbb68f3737d7502605555d02bafc0cd8
+       
                 <li class="dropdown  navbar-right special-menu"> <a href="#">Todays offer</a> </li>
               </ul>
               <!-- /.navbar-nav -->
