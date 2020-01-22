@@ -23,6 +23,7 @@
 <link rel="stylesheet" href="assets/css/animate.min.css">
 <link rel="stylesheet" href="assets/css/rateit.css">
 <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
 <!-- Icons/Glyphs -->
 <link rel="stylesheet" href="assets/css/font-awesome.css">
@@ -977,6 +978,41 @@ include 'navbar.php';
 <?php 
 include 'footer.php'
  ?>
+<script>
+$(document).ready(function(){
+  
+  //Function for ajax live search
+  function load_data(product_query){
+    $.ajax({
+      url:"backend_live_search.php",
+      method:"POST",
+      data:{product_query:product_query},
+      success:function(data){
+        $('#result-live').html(data);
+      }
+    });
+  }
+
+  // Ajax search box 
+  $('#search-box').keyup(function(){
+    var search = $(this).val();
+    if(search != ''){
+      load_data(search);
+    } else{
+      load_data();
+    }
+  });
+
+  // Make ajax search results disappear on clicking anywhere else
+  $(document).click(function(event) { 
+    $target = $(event.target);
+    if(!$target.closest('#result-live').length && 
+    $('#result-live').is(":visible")) {
+      $('#result-live').empty();
+    }        
+  });
+});
+</script>
 
 <!-- ============================================================= FOOTER ============================================================= -->
 
