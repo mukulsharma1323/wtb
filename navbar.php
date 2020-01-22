@@ -166,7 +166,8 @@
                         </div>
                         <!-- /.row --> 
                       </div>
-                      <!-- /.yamm-content --> </li>
+                      <!-- /.yamm-content -->
+                    </li>
                   </ul>
                 </li>
        
