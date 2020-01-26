@@ -88,10 +88,10 @@
                  <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
                    <div class="nav-outer">
                      <ul class="nav navbar-nav">
-       <<<<<<< HEAD
+       
                        <li class="active dropdown yamm-fw"> <a href="index.php">Home</a> </li>
                        <li class="active dropdown yamm-fw"> <a href="vendors.php">Sellers</a> </li>
-       =======
+       
                        <li class="active dropdown yamm-fw"> <a href="home.html" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Home</a> </li>
                        <li class="dropdown mega-menu"> 
                        <a href="category.html"  data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">Electronics <span class="menu-label hot-menu hidden-xs">new</span> </a>
@@ -172,7 +172,7 @@
                           </ul>
                         </li>
                         
-        >>>>>>> 7899f9ffcbb68f3737d7502605555d02bafc0cd8
+        
                         <li class="dropdown  navbar-right special-menu"> <a href="#">Todays offer</a> </li>
                       </ul>
                       <!-- /.navbar-nav -->

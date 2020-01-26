@@ -148,7 +148,7 @@ $result=mysqli_query($connection,"select * from products");
                           <h3 class="name"><a href="detail.php?id='.$row['id'].'">'.$row['product_name'].'</a></h3>
                           <div class="rating rateit-small"></div>
                           <div class="description"></div>
-                          <div class="product-price"> <span class="price"> $450.99 </span> <span class="price-before-discount">$ 800</span> </div>
+                          <div class="product-price"> <span class="price"> Rs.'.$row['selling_price'].' </span> <span class="price-before-discount">Rs.'.$row['MRP'].'</span> </div>
                           <!-- /.product-price -->
 
                         </div>

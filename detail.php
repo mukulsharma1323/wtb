@@ -46,7 +46,7 @@
 <?php
 include 'navbar.php';
 include 'db_config.php';
-
+$result1=mysqli_query($connection,"select * from products");
 $id=$_GET['id'];
 $result=mysqli_query($connection,"select * from products where id=$id");
     $r = mysqli_fetch_array($result);
@@ -55,7 +55,10 @@ $result=mysqli_query($connection,"select * from products where id=$id");
     $sell=$r['selling_price'];
     $mrp=$r['MRP'];
     $image="/v1/vendor/uploads/images/".$r['image_url'];
+    $vid=$r['vendor_id'];
 
+    $result2=mysqli_query($connection,"select * from vendors where id=$vid");
+    $r2 = mysqli_fetch_array($result2);
 ?>
 <!-- ============================================== HEADER : END ============================================== -->
 <div class="breadcrumb">
@@ -151,6 +154,11 @@ $result=mysqli_query($connection,"select * from products where id=$id");
 
 								</div><!-- /.row -->
 							</div><!-- /.price-container -->
+							<div class="description-container m-t-20">
+								<span style="font-weight: bold; font-size: 15px; ">Shop Name </span>:<span style="font-size: 14px;" > <?php echo $r2['shop_name']; ?> </span></br>
+								<span style="font-weight: bold; font-size: 15px;">Vendor Name</span>: <span style="font-size: 14px;"><?php echo $r2['firstname']. " ".$r2['lastname']; ?></span>
+							</div>
+							
 						</div><!-- /.product-info -->
 					</div><!-- /.col-sm-7 -->
 				</div><!-- /.row -->
@@ -158,79 +166,60 @@ $result=mysqli_query($connection,"select * from products where id=$id");
 
 				<!-- ============================================== UPSELL PRODUCTS ============================================== -->
 <section class="section featured-product wow fadeInUp">
-	<h3 class="section-title">online similar products</h3>
+	<h3 class="section-title">same products by different vendors</h3>
 	<div class="owl-carousel home-owl-carousel upsell-product custom-carousel owl-theme outer-top-xs">
-		<div class="item item-carousel">
-			<div class="products">
-				<div class="product">
-					<div class="product-image">
-						<div class="image">
-							<a href="detail.html"><img class="flexImage" src="assets/images/products/p1.jpg" alt=""></a>
-						</div><!-- /.image -->
-					</div><!-- /.product-image -->
-					<div class="product-info text-left">
-						<h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-						<div class="product-price">
-							<span class="price">Rs.650.99</span><span class="price-before-discount">Rs. 800</span>
-						</div><!-- /.product-price -->
-					</div><!-- /.product-info -->
-				</div><!-- /.product -->
-			</div><!-- /.products -->
-		</div><!-- /.item -->
 
-		<div class="item item-carousel">
-			<div class="products">
-				<div class="product">
-					<div class="product-image">
-						<div class="image">
-							<a href="detail.html"><img class="flexImage" src="assets/images/products/p2.jpg" alt=""></a>
-						</div><!-- /.image -->
-					</div><!-- /.product-image -->
-					<div class="product-info text-left">
-						<h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-						<div class="product-price">
-							<span class="price">Rs.650.99</span><span class="price-before-discount">Rs. 800</span>
-						</div><!-- /.product-price -->
-					</div><!-- /.product-info -->
-				</div><!-- /.product -->
-			</div><!-- /.products -->
-		</div><!-- /.item -->
+		<?php
+		while($row = mysqli_fetch_array($result1))  
+        {
+        	if(strtolower($pname) == strtolower($row['product_name']) && $id!=$row['id'])
+        	{
+        		$Vid=$row['vendor_id'];
+        		$result3=mysqli_query($connection,"select * from vendors where id=$Vid");
+    			$r3 = mysqli_fetch_array($result3);
+    			$fullname=$r3['firstname']." ".$r3['lastname'];
+        		echo '<div class="category-product-inner wow fadeInUp">
+                  <div class="products">
+                    <div class="product-list product">
+                      <div class="row product-list-row">
+                        <div class="col col-sm-4 col-lg-4">
+                          
+                          
+                        </div>
+                        <!-- /.col -->
+                        <div class="col col-sm-8 col-lg-8">
+                          <div class="product-info">
+                            <h3 class="name"><a href="detail.php?id='.$row['id'].'">'.$row['product_name'].'</a></h3>
+                            <div class="rating rateit-small"></div>
+                            <div class="product-price"> <span class="price">Rs. '.$row['selling_price'].' </span> <span class="price-before-discount">Rs. '.$row['MRP'].'</span> </div>
+                            <!-- /.product-price -->
+                            <div class="description m-t-10" style="font-size:15px;">Shop Name: '.$r3['shop_name'].'<br>Vendor Name: '.$fullname.'</div>
+                            <div class="cart clearfix animate-effect">
+                              <div class="action">
 
-		<div class="item item-carousel">
-			<div class="products">
-				<div class="product">
-					<div class="product-image">
-						<div class="image">
-							<a href="detail.html"><img class="flexImage" src="assets/images/products/p3.jpg" alt=""></a>
-						</div><!-- /.image -->
-					</div><!-- /.product-image -->
-					<div class="product-info text-left">
-						<h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-						<div class="product-price">
-							<span class="price">Rs.650.99</span><span class="price-before-discount">Rs. 800</span>
-						</div><!-- /.product-price -->
-					</div><!-- /.product-info -->
-				</div><!-- /.product -->
-			</div><!-- /.products -->
-		</div><!-- /.item -->
+                              </div>
+                              <!-- /.action -->
+                            </div>
+                            <!-- /.cart -->
 
-		<div class="item item-carousel">
-			<div class="products">
-				<div class="product">
-					<div class="product-image">
-						<div class="image">
-							<a href="detail.html"><img class="flexImage" src="assets/images/products/p4.jpg" alt=""></a>
-						</div><!-- /.image -->
-					</div><!-- /.product-image -->
-					<div class="product-info text-left">
-						<h3 class="name"><a href="detail.html">Floral Print Buttoned</a></h3>
-						<div class="product-price">
-							<span class="price">Rs.650.99</span><span class="price-before-discount">Rs. 800</span>
-						</div><!-- /.product-price -->
-					</div><!-- /.product-info -->
-				</div><!-- /.product -->
-			</div><!-- /.products -->
-		</div><!-- /.item -->
+                          </div>
+                          <!-- /.product-info -->
+                        </div>
+                        <!-- /.col -->
+                      </div>
+                      <!-- /.product-list-row -->
+                      
+                    </div>
+                    <!-- /.product-list -->
+                  </div>
+                  <!-- /.products -->
+                </div>';
+        	}
+        	
+        }
+?>
+		
+
 	</div><!-- /.products -->
 </div><!-- /.item -->
 </div><!-- /.home-owl-carousel -->
